@@ -6,12 +6,12 @@
 
 body {
   font-family: "Work Sans", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
 }
 
 nav {
-  background-color: antiquewhite;
+  background-color: #c2987c;
 }
 .container {
   width: 1024px;
@@ -55,6 +55,14 @@ a {
   color: black;
 }
 
+.menu-item a {
+  transition: all 0.7s ease;
+}
+
+.menu-item a:hover {
+  color: #fff;
+}
+
 .user ul {
   display: flex;
   justify-content: flex-end;
@@ -68,6 +76,16 @@ a {
 
 li.login {
   cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+li.login {
+  transition: all 0.7s ease;
+}
+
+li.login:hover {
+  color: #fff;
 }
 
 .main-section {
@@ -84,4 +102,28 @@ li.login {
 
 .main-content form {
   padding: 10px;
+}
+
+input {
+  padding: 10px;
+  outline: none;
+  border-radius: 30px;
+  border: 1px solid #c2987c;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: 1px solid #c2987c;
+}
+
+input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.compozit {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
