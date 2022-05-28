@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5eae3;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul.menu-list {
+  display: flex;
+  list-style: none;
+}
+
+li.menu-item {
+  padding: 0px 15px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user span {
+  padding: 0 15px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.user img {
+  width: 30px;
+  cursor: pointer;
+}
