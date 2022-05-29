@@ -17,6 +17,7 @@ body {
   margin: 0 auto;
 }
 
+/* ---------------Header customization--------------- */
 div.header-container {
   display: flex;
   justify-content: space-between;
@@ -91,6 +92,8 @@ div.topBotomBordersOut a:hover:after {
   opacity: 1;
   transform: translateY(0px);
 }
+
+/* ---------------Header customization--------------- */
 
 .main-section {
   display: flex;

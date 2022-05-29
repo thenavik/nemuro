@@ -1,3 +1,81 @@
+/* ---------------Header customization--------------- */
+div.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 3em;
+}
+
+div.header-container a {
+  color: rgb(36, 36, 36);
+  text-decoration: none;
+  font-size: 20px;
+  margin: 0px 10px;
+  padding: 10px 10px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#logo {
+  font-size: 25px;
+  font-weight: 800;
+  color: rgb(36, 36, 36);
+}
+
+#logo:hover {
+  color: #fff;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+.blue {
+  background: #99ccff;
+  -webkit-box-shadow: 0px 10px 15px -5px rgba(153, 204, 255, 0.31);
+  -moz-box-shadow: 0px 10px 15px -5px rgba(153, 204, 255, 0.31);
+  box-shadow: 0px 10px 15px -5px rgba(153, 204, 255, 0.31);
+}
+div.topBotomBordersOut a:before,
+div.topBotomBordersOut a:after {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  content: "";
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+div.header-container ul li a:hover {
+  color: #fff;
+}
+
+div.topBotomBordersOut a:before {
+  top: 0px;
+  transform: translateY(10px);
+}
+
+div.topBotomBordersOut a:after {
+  bottom: 0px;
+  transform: translateY(-10px);
+}
+
+div.topBotomBordersOut a:hover:before,
+div.topBotomBordersOut a:hover:after {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* ---------------Header customization--------------- */
+
 .btn {
   display: flex;
   justify-content: center;
