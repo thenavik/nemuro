@@ -13,6 +13,11 @@ body {
 nav {
   background-color: #c2987c;
 }
+
+.none {
+  display: none;
+}
+
 .container {
   width: 1024px;
   margin: 0 auto;
