@@ -45,6 +45,7 @@
       </div>
     </nav>
     <div class="container">
+      <h2>Выберите опцию расчета</h2>
       <select name="" id="">
         <option value="">Композит двух дат</option>
         <option value="">Композит трех дат</option>
@@ -54,6 +55,7 @@
     <div class="main-section">
       <div class="main-content">
         <h2>Добавьте дату рождения</h2>
+        <h2 class="subtitle">Первая дата:</h2>
         <form id="form" action="">
           <span>День:</span>
           <input
@@ -82,8 +84,40 @@
             placeholder="1999"
             required
           />
-          <button id="count-btn">Посчитать</button>
         </form>
+        <h2 class="subtitle">Вторая дата:</h2>
+        <form id="form" action="">
+          <span>День:</span>
+          <input
+            name="day"
+            id="day"
+            type="text"
+            maxlength="2"
+            placeholder="01"
+            required
+          />
+          <span>Месяц:</span>
+          <input
+            name="month"
+            id="month"
+            type="text"
+            maxlength="2"
+            placeholder="01"
+            required
+          />
+          <span>Год:</span>
+          <input
+            name="year"
+            id="year"
+            type="text"
+            maxlength="4"
+            placeholder="1999"
+            required
+          />
+        </form>
+        <div class="btn">
+          <button id="count-btn">Посчитать</button>
+        </div>
       </div>
     </div>
     <script src="js/dayscompozit.js"></script>
