@@ -13,6 +13,61 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/dayscompozit.css" />
+
+    <style>
+      .tbl {
+        border: 1px solid #000000;
+      }
+      .tbh {
+        border: 1px solid #3366ff;
+        background-color: #99ccff;
+        font-weight: bold;
+      }
+      .nil {
+        border: 1px solid #ffffff;
+        background-color: #ffffff;
+      }
+      .ind {
+        font-size: 24px;
+        font-weight: bold;
+        color: #000000;
+      }
+      .ind_s {
+        font-size: 16px;
+        font-weight: bold;
+        color: #000000;
+      }
+      .sub {
+        font-size: 12px;
+        color: #999999;
+      }
+      .sub_s {
+        font-size: 10px;
+        color: #999999;
+      }
+      .inda {
+        font-size: 18px;
+        font-weight: bold;
+        color: #000000;
+      }
+      .gray {
+        color: #999999;
+      }
+      .eso ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+      }
+      .eso ul li {
+        float: left;
+        padding: 1px;
+        font-size: 12px;
+      }
+      .anons {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+    </style>
   </head>
   <body>
     <nav>
@@ -54,11 +109,12 @@
     <div class="main-section">
       <div class="main-content">
         <h2>Добавьте дату рождения</h2>
+        <h2 class="subtitle">Первая дата:</h2>
         <form id="form" action="">
           <span>День:</span>
           <input
             name="day"
-            id="day"
+            id="day1"
             type="text"
             maxlength="2"
             placeholder="01"
@@ -67,7 +123,7 @@
           <span>Месяц:</span>
           <input
             name="month"
-            id="month"
+            id="month1"
             type="text"
             maxlength="2"
             placeholder="01"
@@ -76,16 +132,888 @@
           <span>Год:</span>
           <input
             name="year"
-            id="year"
+            id="year1"
             type="text"
             maxlength="4"
             placeholder="1999"
             required
           />
-          <button id="count-btn">Посчитать</button>
+          <h2 class="subtitle">Вторая дата:</h2>
+          <span>День:</span>
+          <input
+            name="day"
+            id="day2"
+            type="text"
+            maxlength="2"
+            placeholder="01"
+            required
+          />
+          <span>Месяц:</span>
+          <input
+            name="month"
+            id="month2"
+            type="text"
+            maxlength="2"
+            placeholder="01"
+            required
+          />
+          <span>Год:</span>
+          <input
+            name="year"
+            id="year2"
+            type="text"
+            maxlength="4"
+            placeholder="1999"
+            required
+          />
+
+          <div class="btn">
+            <button id="count-btn">Посчитать</button>
+          </div>
         </form>
       </div>
     </div>
+
+    <section class="container">
+      <tr>
+        <td>
+          <br />
+          <table width="100%" border="0" align="center">
+            <tbody>
+              <tr>
+                <td width="45%" align="left" valign="middle">
+                  <table border="0" align="center">
+                    <tbody>
+                      <tr>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">13</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">VII</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">I + II + IV</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">14</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">VII</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">I + II + IV</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          align="center"
+                          valign="middle"
+                          colspan="7"
+                          class="tbh"
+                        >
+                          01.01.1
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">12</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">VIII</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">III + V</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">1</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">I</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s"></span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">2</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">I</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s"></span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">3</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">I</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s"></span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">7</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">III</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">II + I</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">4</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">II</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">I + I</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">5</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">II</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">I + I</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">6</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">IV</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">II + II</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">8</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">V</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">I + IV</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="10%" align="center" valign="middle">
+                  <font size="7">+</font>
+                </td>
+                <td width="45%" align="right" valign="middle">
+                  <table border="0" align="center">
+                    <tbody>
+                      <tr>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">13</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">VII</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">I + II + IV</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">14</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">VII</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">I + II + IV</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          align="center"
+                          valign="middle"
+                          colspan="7"
+                          class="tbh"
+                        >
+                          01.01.1
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">12</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">VIII</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">III + V</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">1</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">I</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s"> </span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">2</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">I</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s"></span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">3</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">I</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s"></span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">7</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">III</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">II + I</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">4</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">II</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">I + I</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">5</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">II</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">I + I</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">6</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">IV</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">II + II</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%" align="center" valign="middle">
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">8</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="ind_s">V</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="middle">
+                                  <span class="sub_s">I + IV</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                        <td width="14%">&nbsp;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <center><font size="7">=</font></center>
+          <table width="100%" border="0" align="center">
+            <tbody>
+              <tr>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">13</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind">XIV</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">VII + VII</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">14</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind">XIV</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">VII + VII</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" colspan="7" class="tbh">
+                  01.01.1 и 01.01.1
+                </td>
+              </tr>
+              <tr>
+                <td width="14%">&nbsp;</td>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">1</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind">II</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">I + I</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">2</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind">II</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">I + I</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">3</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind">II</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">I + I</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">7</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind">VI</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">III + III</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">4</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind">IV</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">II + II</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">5</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind">IV</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">II + II</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+              </tr>
+              <tr>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">6</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind">VIII</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">IV + IV</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+              </tr>
+              <tr>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">8</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind">X</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">V + V</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" colspan="7">
+                  Позиций из персонального портрета первого человека: 8<br />Позиций
+                  из персонального портрета второго человека: 8
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </section>
+
     <script src="js/dayscompozit.js"></script>
   </body>
 </html>
