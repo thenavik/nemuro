@@ -78,16 +78,16 @@
           </div>
           <ul class="menu-list">
             <li class="menu-item">
-              <a href="#">Главная</a>
+              <a href="./index.html">Главная</a>
             </li>
             <li class="menu-item">
               <a href="#">Композит дня/месяца</a>
             </li>
             <li class="menu-item">
-              <a href="#">Личностный портрет</a>
+              <a href="./index.html">Личностный портрет</a>
             </li>
             <li class="menu-item">
-              <a href="#">Композит двух дат</a>
+              <a href="./dayscompozit.html">Композит двух дат</a>
             </li>
           </ul>
           <div class="user">
@@ -99,46 +99,11 @@
         </div>
       </div>
     </nav>
-    <div class="container">
-      <select name="" id="select">
-        <option value="1">Композит двух дат</option>
-        <option value="2">Композит трех дат</option>
-        <option value="3">Композит четырех дат</option>
-      </select>
-    </div>
     <div class="main-section">
       <div class="main-content">
         <h2>Добавьте дату рождения</h2>
         <h2 class="subtitle">Первая дата:</h2>
         <form id="form" action="">
-          <span>День:</span>
-          <input
-            name="day"
-            id="day1"
-            type="text"
-            maxlength="2"
-            placeholder="01"
-            required
-          />
-          <span>Месяц:</span>
-          <input
-            name="month"
-            id="month1"
-            type="text"
-            maxlength="2"
-            placeholder="01"
-            required
-          />
-          <span>Год:</span>
-          <input
-            name="year"
-            id="year1"
-            type="text"
-            maxlength="4"
-            placeholder="1999"
-            required
-          />
-          <h2 class="subtitle">Вторая дата:</h2>
           <span>День:</span>
           <input
             name="day"
@@ -167,6 +132,35 @@
             required
           />
 
+          <h2 class="subtitle">Вторая дата:</h2>
+          <span>День:</span>
+          <input
+            name="day"
+            id="day1"
+            type="text"
+            maxlength="2"
+            placeholder="01"
+            required
+          />
+          <span>Месяц:</span>
+          <input
+            name="month"
+            id="month1"
+            type="text"
+            maxlength="2"
+            placeholder="01"
+            required
+          />
+          <span>Год:</span>
+          <input
+            name="year"
+            id="year1"
+            type="text"
+            maxlength="4"
+            placeholder="1999"
+            required
+          />
+          <!-- // -->
           <div class="btn">
             <button id="count-btn">Посчитать</button>
           </div>
@@ -174,7 +168,7 @@
       </div>
     </div>
 
-    <section class="container">
+    <section class="container none" id="table">
       <tr>
         <td>
           <br />
@@ -243,6 +237,7 @@
                           valign="middle"
                           colspan="7"
                           class="tbh"
+                          id="date1"
                         >
                           01.01.1
                         </td>
@@ -258,12 +253,12 @@
                               </tr>
                               <tr>
                                 <td align="center" valign="middle">
-                                  <span class="ind_s" id="p12R">VIII</span>
+                                  <span class="ind_s" id="p12L">VIII</span>
                                 </td>
                               </tr>
                               <tr>
                                 <td align="center" valign="middle">
-                                  <span class="sub_s" id="rightAnswer12"
+                                  <span class="sub_s" id="leftAnswer12"
                                     >III + V</span
                                   >
                                 </td>
@@ -543,6 +538,7 @@
                           valign="middle"
                           colspan="7"
                           class="tbh"
+                          id="date2"
                         >
                           01.01.1
                         </td>
@@ -558,12 +554,12 @@
                               </tr>
                               <tr>
                                 <td align="center" valign="middle">
-                                  <span class="ind_s" id="p12L">VIII</span>
+                                  <span class="ind_s" id="p12R">VIII</span>
                                 </td>
                               </tr>
                               <tr>
                                 <td align="center" valign="middle">
-                                  <span class="sub_s" id="leftAnswer12"
+                                  <span class="sub_s" id="rightAnswer12"
                                     >III + V</span
                                   >
                                 </td>
@@ -834,9 +830,13 @@
                 </td>
               </tr>
               <tr>
-                <td align="center" valign="middle" colspan="7" class="tbh">
-                  01.01.1 и 01.01.1
-                </td>
+                <td
+                  align="center"
+                  valign="middle"
+                  colspan="7"
+                  class="tbh"
+                  id="date3"
+                ></td>
               </tr>
               <tr>
                 <td width="14%">&nbsp;</td>
