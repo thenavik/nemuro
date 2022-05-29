@@ -7,95 +7,89 @@
 body {
   position: relative;
   font-family: "Libre Baskerville", serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
-}
-
-nav {
-  background-color: #c2987c;
-}
-
-.none {
-  display: none;
+  color: rgb(36, 36, 36);
 }
 
 .container {
-  width: 1024px;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
-.menu {
+div.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  padding: 0.5em 3em;
 }
 
-.logo {
-  display: flex;
-  justify-content: flex-start;
+div.header-container a {
+  color: rgb(36, 36, 36);
+  text-decoration: none;
+  font-size: 20px;
+  margin: 0px 10px;
+  padding: 10px 10px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-
-.logo a {
+#logo {
   font-size: 25px;
-}
-
-.logo a span {
-  font-size: 30px;
   font-weight: 800;
-  color: white;
+  color: rgb(36, 36, 36);
 }
 
-.menu-list {
+#logo:hover {
+  color: #fff;
+}
+
+ul {
   display: flex;
-  margin: 0 10px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 li {
   list-style: none;
-  padding: 10px 15px;
+}
+.blue {
+  background: #99ccff;
+  -webkit-box-shadow: 0px 10px 15px -5px rgba(153, 204, 255, 0.31);
+  -moz-box-shadow: 0px 10px 15px -5px rgba(153, 204, 255, 0.31);
+  box-shadow: 0px 10px 15px -5px rgba(153, 204, 255, 0.31);
+}
+div.topBotomBordersOut a:before,
+div.topBotomBordersOut a:after {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  content: "";
+  opacity: 0;
+  transition: all 0.3s;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.menu-item a {
-  transition: all 0.7s ease;
-}
-
-.menu-item a:hover {
+div.header-container ul li a:hover {
   color: #fff;
 }
 
-.menu-item a:focus {
-  color: #fff;
+div.topBotomBordersOut a:before {
+  top: 0px;
+  transform: translateY(10px);
 }
 
-.user ul {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+div.topBotomBordersOut a:after {
+  bottom: 0px;
+  transform: translateY(-10px);
 }
 
-.user img {
-  width: 30px;
-  cursor: pointer;
-}
-
-li.login {
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-li.login {
-  transition: all 0.7s ease;
-}
-
-li.login:hover {
-  color: #fff;
+div.topBotomBordersOut a:hover:before,
+div.topBotomBordersOut a:hover:after {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 .main-section {
@@ -115,21 +109,23 @@ li.login:hover {
 }
 
 input {
-  padding: 10px 15px;
+  max-width: 4rem;
+  padding: 10px;
   outline: none;
-  border-radius: 30px;
-  border: 1px solid #c2987c;
-  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #99ccff;
+  font-size: 14px;
+  font-weight: 600;
   background-color: transparent;
 }
 
 input:focus {
-  outline: 1px solid #c2987c;
+  outline: 1px solid #99ccff;
 }
 
 input::placeholder {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .compozit {
@@ -140,26 +136,33 @@ input::placeholder {
 }
 
 button {
-  padding: 10px;
-  border-radius: 30px;
-  border: 1px solid #8d6f5b;
-  background-color: #c2987c;
-  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #99ccff;
+  background-color: #99ccff;
+  -webkit-box-shadow: 0px 4px 15px 1px rgba(153, 204, 255, 0.25);
+  -moz-box-shadow: 0px 4px 15px 1px rgba(153, 204, 255, 0.25);
+  box-shadow: 0px 4px 15px 1px rgba(153, 204, 255, 0.25);
+  font-size: 14px;
   font-weight: 600;
+  color: rgb(36, 36, 36);
   cursor: pointer;
-  transition: all 0.7s ease;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  background-color: #8d6f5b;
+  background-color: #99ccff;
   color: #fff;
+  -webkit-box-shadow: 0px 10px 15px 1px rgba(153, 204, 255, 0.31);
+  -moz-box-shadow: 0px 10px 15px 1px rgba(153, 204, 255, 0.31);
+  box-shadow: 0px 10px 15px 1px rgba(153, 204, 255, 0.31);
 }
 
 section {
   margin-top: 30px !important;
   margin-bottom: 100px !important;
 }
-
+/* 
 .footer {
   position: absolute;
   margin-top: 50px;
@@ -171,4 +174,4 @@ section {
   width: 100%;
   text-align: center;
   line-height: 1.5;
-}
+} */
