@@ -16,7 +16,7 @@ function getFormValue(event) {
 }
 
 function resultPsiPotret(data) {
-  const p1 = Number(data.day);
+  const p1 = Number(data.day) > 22 ? Number(data.day) - 22 : Number(data.day);
   const p2 = Number(data.month);
   const p3 = data.year
     .split("")
