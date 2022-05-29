@@ -15,8 +15,8 @@ section {
   margin-bottom: 100px !important;
 }
 
-.footer {
-  position: fixed;
+/* .footer {
+  position: absolute;
   margin-top: 50px;
   left: 0;
   bottom: 0;
@@ -26,4 +26,4 @@ section {
   width: 100%;
   text-align: center;
   line-height: 1.5;
-}
+} */

@@ -27,7 +27,7 @@ const p12HtmlL = document.querySelector("#p12L");
 const p13HtmlL = document.querySelector("#p13L");
 const p14HtmlL = document.querySelector("#p14L");
 
-//
+//All ответы сложения LEFT + Right
 const all1Html = document.querySelector("#all1");
 const all2Html = document.querySelector("#all2");
 const all3Html = document.querySelector("#all3");
@@ -39,6 +39,44 @@ const all8Html = document.querySelector("#all8");
 const all12Html = document.querySelector("#all12");
 const all13Html = document.querySelector("#all13");
 const all14Html = document.querySelector("#all14");
+
+//Что с чем сложилось -----------------------------------------------------------------
+//LEFT
+const leftAnswer1 = document.querySelector("#leftAnswer1");
+const leftAnswer2 = document.querySelector("#leftAnswer2");
+const leftAnswer3 = document.querySelector("#leftAnswer3");
+const leftAnswer4 = document.querySelector("#leftAnswer4");
+const leftAnswer5 = document.querySelector("#leftAnswer5");
+const leftAnswer6 = document.querySelector("#leftAnswer6");
+const leftAnswer7 = document.querySelector("#leftAnswer7");
+const leftAnswer8 = document.querySelector("#leftAnswer8");
+const leftAnswer12 = document.querySelector("#leftAnswer12");
+const leftAnswer13 = document.querySelector("#leftAnswer13");
+const leftAnswer14 = document.querySelector("#leftAnswer14");
+//RIGHT
+const rightAnswer1 = document.querySelector("#rightAnswer1");
+const rightAnswer2 = document.querySelector("#rightAnswer2");
+const rightAnswer3 = document.querySelector("#rightAnswer3");
+const rightAnswer4 = document.querySelector("#rightAnswer4");
+const rightAnswer5 = document.querySelector("#rightAnswer5");
+const rightAnswer6 = document.querySelector("#rightAnswer6");
+const rightAnswer7 = document.querySelector("#rightAnswer7");
+const rightAnswer8 = document.querySelector("#rightAnswer8");
+const rightAnswer12 = document.querySelector("#rightAnswer12");
+const rightAnswer13 = document.querySelector("#rightAnswer13");
+const rightAnswer14 = document.querySelector("#rightAnswer14");
+//Bottom
+const bottomAnswer1 = document.querySelector("#bottomAnswer1");
+const bottomAnswer2 = document.querySelector("#bottomAnswer2");
+const bottomAnswer3 = document.querySelector("#bottomAnswer3");
+const bottomAnswer4 = document.querySelector("#bottomAnswer4");
+const bottomAnswer5 = document.querySelector("#bottomAnswer5");
+const bottomAnswer6 = document.querySelector("#bottomAnswer6");
+const bottomAnswer7 = document.querySelector("#bottomAnswer7");
+const bottomAnswer8 = document.querySelector("#bottomAnswer8");
+const bottomAnswer12 = document.querySelector("#bottomAnswer12");
+const bottomAnswer13 = document.querySelector("#bottomAnswer13");
+const bottomAnswer14 = document.querySelector("#bottomAnswer14");
 
 form.addEventListener("submit", getFormValue);
 function getFormValue(event) {

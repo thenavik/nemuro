@@ -5,6 +5,7 @@
 }
 
 body {
+  position: relative;
   font-family: "Libre Baskerville", serif;
   font-size: 14px;
   font-weight: 600;
@@ -160,7 +161,7 @@ section {
 }
 
 .footer {
-  position: fixed;
+  position: absolute;
   margin-top: 50px;
   left: 0;
   bottom: 0;
