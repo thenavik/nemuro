@@ -1,5 +1,8 @@
-const select = document.querySelector("#select");
+const table = document.querySelector("#table");
 const form = document.querySelector("#form");
+const date1 = document.querySelector("#date1");
+const date2 = document.querySelector("#date2");
+const date3 = document.querySelector("#date3");
 
 // получаем все позиции left
 const p1HtmlR = document.querySelector("#p1R");
@@ -41,9 +44,6 @@ const all14Html = document.querySelector("#all14");
 
 //Что с чем сложилось -----------------------------------------------------------------
 //LEFT
-const leftAnswer1 = document.querySelector("#leftAnswer1");
-const leftAnswer2 = document.querySelector("#leftAnswer2");
-const leftAnswer3 = document.querySelector("#leftAnswer3");
 const leftAnswer4 = document.querySelector("#leftAnswer4");
 const leftAnswer5 = document.querySelector("#leftAnswer5");
 const leftAnswer6 = document.querySelector("#leftAnswer6");
@@ -53,9 +53,6 @@ const leftAnswer12 = document.querySelector("#leftAnswer12");
 const leftAnswer13 = document.querySelector("#leftAnswer13");
 const leftAnswer14 = document.querySelector("#leftAnswer14");
 //RIGHT
-const rightAnswer1 = document.querySelector("#rightAnswer1");
-const rightAnswer2 = document.querySelector("#rightAnswer2");
-const rightAnswer3 = document.querySelector("#rightAnswer3");
 const rightAnswer4 = document.querySelector("#rightAnswer4");
 const rightAnswer5 = document.querySelector("#rightAnswer5");
 const rightAnswer6 = document.querySelector("#rightAnswer6");
@@ -73,14 +70,12 @@ const bottomAnswer5 = document.querySelector("#bottomAnswer5");
 const bottomAnswer6 = document.querySelector("#bottomAnswer6");
 const bottomAnswer7 = document.querySelector("#bottomAnswer7");
 const bottomAnswer8 = document.querySelector("#bottomAnswer8");
-const bottomAnswer12 = document.querySelector("#bottomAnswer12");
 const bottomAnswer13 = document.querySelector("#bottomAnswer13");
 const bottomAnswer14 = document.querySelector("#bottomAnswer14");
 
 form.addEventListener("submit", getFormValue);
 function getFormValue(event) {
   event.preventDefault();
-  getValueSelect();
 
   // forms input
   const day1 = form.querySelector('[id="day1"]');
@@ -101,15 +96,6 @@ function getFormValue(event) {
     day: day2.value,
     month: month2.value,
     year: year2.value,
-  };
-
-  const dataAll = {
-    day: Number(dataLeft.day) + Number(dataRight.day),
-    month: Number(dataLeft.month) + Number(dataRight.month),
-    year:
-      sumYear(dataLeft.year) + sumYear(dataRight.year) > 22
-        ? sumYear(dataLeft.year) + sumYear(dataRight.year) - 22
-        : sumYear(dataLeft.year) + sumYear(dataRight.year),
   };
 
   const resultLeft = resultPsiPotretLeft(dataLeft);
@@ -153,12 +139,109 @@ function getFormValue(event) {
   all13Html.innerHTML = resultAll.p13;
   all14Html.innerHTML = resultAll.p14;
 
-  //   table.classList.remove("none");
-}
+  leftAnswer4.innerHTML = `${romanize(resultLeft.p1)} + ${romanize(
+    resultLeft.p2
+  )}`;
 
-function getValueSelect() {
-  const value = select.options.selectedIndex + 1;
-  console.log(value);
+  leftAnswer5.innerHTML = `${romanize(resultLeft.p2)} + ${romanize(
+    resultLeft.p3
+  )}`;
+
+  leftAnswer6.innerHTML = `${romanize(resultLeft.p4)} + ${romanize(
+    resultLeft.p5
+  )}`;
+
+  leftAnswer7.innerHTML = `${romanize(resultLeft.p1)} + ${romanize(
+    resultLeft.p5
+  )}`;
+
+  leftAnswer8.innerHTML = `${romanize(resultLeft.p2)} + ${romanize(
+    resultLeft.p6
+  )}`;
+
+  leftAnswer12.innerHTML = `${romanize(resultLeft.p7)} + ${romanize(
+    resultLeft.p8
+  )}`;
+
+  leftAnswer13.innerHTML = `${romanize(resultLeft.p1)} + ${romanize(
+    resultLeft.p4
+  )} + ${romanize(resultLeft.p6)}`;
+
+  leftAnswer14.innerHTML = `${romanize(resultLeft.p3)} + ${romanize(
+    resultLeft.p5
+  )} + ${romanize(resultLeft.p6)}`;
+
+  //   right answer
+
+  rightAnswer4.innerHTML = `${romanize(resultRight.p1)} + ${romanize(
+    resultRight.p2
+  )}`;
+
+  rightAnswer5.innerHTML = `${romanize(resultRight.p2)} + ${romanize(
+    resultRight.p3
+  )}`;
+
+  rightAnswer6.innerHTML = `${romanize(resultRight.p4)} + ${romanize(
+    resultRight.p5
+  )}`;
+
+  rightAnswer7.innerHTML = `${romanize(resultRight.p1)} + ${romanize(
+    resultRight.p5
+  )}`;
+
+  rightAnswer8.innerHTML = `${romanize(resultRight.p2)} + ${romanize(
+    resultRight.p6
+  )}`;
+
+  rightAnswer12.innerHTML = `${romanize(resultRight.p7)} + ${romanize(
+    resultRight.p8
+  )}`;
+
+  rightAnswer13.innerHTML = `${romanize(resultRight.p1)} + ${romanize(
+    resultRight.p4
+  )} + ${romanize(resultRight.p6)}`;
+
+  rightAnswer14.innerHTML = `${romanize(resultRight.p3)} + ${romanize(
+    resultRight.p5
+  )} + ${romanize(resultRight.p6)}`;
+
+  //   bottom Answer
+  bottomAnswer1.innerHTML = `${romanize(resultLeft.p1)} + ${romanize(
+    resultRight.p1
+  )}`;
+  bottomAnswer2.innerHTML = `${romanize(resultLeft.p2)} + ${romanize(
+    resultRight.p2
+  )}`;
+  bottomAnswer3.innerHTML = `${romanize(resultLeft.p3)} + ${romanize(
+    resultRight.p3
+  )}`;
+  bottomAnswer4.innerHTML = `${romanize(resultLeft.p4)} + ${romanize(
+    resultRight.p4
+  )}`;
+  bottomAnswer5.innerHTML = `${romanize(resultLeft.p5)} + ${romanize(
+    resultRight.p5
+  )}`;
+  bottomAnswer6.innerHTML = `${romanize(resultLeft.p6)} + ${romanize(
+    resultRight.p6
+  )}`;
+  bottomAnswer7.innerHTML = `${romanize(resultLeft.p7)} + ${romanize(
+    resultRight.p7
+  )}`;
+  bottomAnswer8.innerHTML = `${romanize(resultLeft.p8)} + ${romanize(
+    resultRight.p8
+  )}`;
+  bottomAnswer13.innerHTML = `${romanize(resultLeft.p13)} + ${romanize(
+    resultRight.p13
+  )}`;
+  bottomAnswer14.innerHTML = `${romanize(resultLeft.p14)} + ${romanize(
+    resultRight.p14
+  )}`;
+
+  date1.innerHTML = `${dataRight.day}.${dataRight.month}.${dataRight.year}`;
+  date2.innerHTML = `${dataLeft.day}.${dataLeft.month}.${dataLeft.year}`;
+  date3.innerHTML = `${dataRight.day}.${dataRight.month}.${dataRight.year} и ${dataLeft.day}.${dataLeft.month}.${dataLeft.year}`;
+
+  table.classList.remove("none");
 }
 
 function sumYear(year) {

@@ -1,5 +1,7 @@
 const form = document.querySelector("#form");
 const table = document.querySelector("#table");
+const tableMiddle = document.querySelector("#tableMiddle");
+
 // получаем все позиции
 const p1Html = document.querySelector("#p1");
 const p2Html = document.querySelector("#p2");
@@ -12,6 +14,16 @@ const p8Html = document.querySelector("#p8");
 const p12Html = document.querySelector("#p12");
 const p13Html = document.querySelector("#p13");
 const p14Html = document.querySelector("#p14");
+
+const topAnswer4 = document.querySelector("#topAnswer4");
+const topAnswer5 = document.querySelector("#topAnswer5");
+const topAnswer6 = document.querySelector("#topAnswer6");
+const topAnswer7 = document.querySelector("#topAnswer7");
+const topAnswer8 = document.querySelector("#topAnswer8");
+const topAnswer12 = document.querySelector("#topAnswer12");
+const topAnswer13 = document.querySelector("#topAnswer13");
+const topAnswer14 = document.querySelector("#topAnswer14");
+
 //Полyчаем sub
 const subP13 = document.querySelector("#sub-p13");
 
@@ -21,6 +33,7 @@ form.addEventListener("submit", getFormValue);
 function getFormValue(event) {
   event.preventDefault();
   table.classList.remove("none");
+  tableMiddle.classList.remove("none");
   let day = form.querySelector('[name="day"]');
   let month = form.querySelector('[name="month"]');
   let year = form.querySelector('[name="year"]');
@@ -44,6 +57,15 @@ function getFormValue(event) {
   p14Html.innerHTML = result.p14;
 
   date.innerHTML = `${data.day}.${data.month}.${data.year}`;
+
+  topAnswer4.innerHTML = `${result.p1} + ${result.p2}`;
+  topAnswer5.innerHTML = `${result.p2} + ${result.p3}`;
+  topAnswer6.innerHTML = `${result.p4} + ${result.p5}`;
+  topAnswer7.innerHTML = `${result.p1} + ${result.p5}`;
+  topAnswer8.innerHTML = `${result.p2} + ${result.p6}`;
+  topAnswer12.innerHTML = `${result.p7} + ${result.p8}`;
+  topAnswer13.innerHTML = `${result.p1} + ${result.p4} + ${result.p6}`;
+  topAnswer14.innerHTML = `${result.p3} + ${result.p5} + ${result.p6}`;
   //   console.log("data", );
 }
 
