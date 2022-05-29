@@ -36,7 +36,6 @@ const all5Html = document.querySelector("#all5");
 const all6Html = document.querySelector("#all6");
 const all7Html = document.querySelector("#all7");
 const all8Html = document.querySelector("#all8");
-const all12Html = document.querySelector("#all12");
 const all13Html = document.querySelector("#all13");
 const all14Html = document.querySelector("#all14");
 
@@ -92,44 +91,68 @@ function getFormValue(event) {
   const month2 = form.querySelector('[id="month2"]');
   const year2 = form.querySelector('[id="year2"]');
 
-  const data = {
-    day1: day1.value,
-    month1: month1.value,
-    year1: year1.value,
-
-    day2: day2.value,
-    month2: month2.value,
-    year2: year2.value,
+  const dataLeft = {
+    day: day1.value,
+    month: month1.value,
+    year: year1.value,
   };
 
-  const result = resultPsiPotret(data);
+  const dataRight = {
+    day: day2.value,
+    month: month2.value,
+    year: year2.value,
+  };
+
+  const dataAll = {
+    day: Number(dataLeft.day) + Number(dataRight.day),
+    month: Number(dataLeft.month) + Number(dataRight.month),
+    year:
+      sumYear(dataLeft.year) + sumYear(dataRight.year) > 22
+        ? sumYear(dataLeft.year) + sumYear(dataRight.year) - 22
+        : sumYear(dataLeft.year) + sumYear(dataRight.year),
+  };
+
+  const resultLeft = resultPsiPotretLeft(dataLeft);
+  const resultRight = resultPsiPotretLeft(dataRight);
+  const resultAll = resultPsiPotretAll(resultLeft, resultRight);
   //left
-  p1HtmlL.innerHTML = result.p1L;
-  p2HtmlL.innerHTML = result.p2L;
-  p3HtmlL.innerHTML = result.p3L;
-  p4HtmlL.innerHTML = result.p4L;
-  p5HtmlL.innerHTML = result.p5L;
-  p6HtmlL.innerHTML = result.p6L;
-  p7HtmlL.innerHTML = result.p7L;
-  p8HtmlL.innerHTML = result.p8L;
-  p12HtmlL.innerHTML = result.p12L;
-  p13HtmlL.innerHTML = result.p13L;
-  p14HtmlL.innerHTML = result.p14L;
+  p1HtmlL.innerHTML = romanize(resultLeft.p1);
+  p2HtmlL.innerHTML = romanize(resultLeft.p2);
+  p3HtmlL.innerHTML = romanize(resultLeft.p3);
+  p4HtmlL.innerHTML = romanize(resultLeft.p4);
+  p5HtmlL.innerHTML = romanize(resultLeft.p5);
+  p6HtmlL.innerHTML = romanize(resultLeft.p6);
+  p7HtmlL.innerHTML = romanize(resultLeft.p7);
+  p8HtmlL.innerHTML = romanize(resultLeft.p8);
+  p12HtmlL.innerHTML = romanize(resultLeft.p12);
+  p13HtmlL.innerHTML = romanize(resultLeft.p13);
+  p14HtmlL.innerHTML = romanize(resultLeft.p14);
 
   //right
-  p1HtmlR.innerHTML = result.p1R;
-  p2HtmlR.innerHTML = result.p2R;
-  p3HtmlR.innerHTML = result.p3R;
-  p4HtmlR.innerHTML = result.p4R;
-  p5HtmlR.innerHTML = result.p5R;
-  p6HtmlR.innerHTML = result.p6R;
-  p7HtmlR.innerHTML = result.p7R;
-  p8HtmlR.innerHTML = result.p8R;
-  p12HtmlR.innerHTML = result.p12R;
-  p13HtmlR.innerHTML = result.p13R;
-  p14HtmlR.innerHTML = result.p14R;
+  p1HtmlR.innerHTML = romanize(resultRight.p1);
+  p2HtmlR.innerHTML = romanize(resultRight.p2);
+  p3HtmlR.innerHTML = romanize(resultRight.p3);
+  p4HtmlR.innerHTML = romanize(resultRight.p4);
+  p5HtmlR.innerHTML = romanize(resultRight.p5);
+  p6HtmlR.innerHTML = romanize(resultRight.p6);
+  p7HtmlR.innerHTML = romanize(resultRight.p7);
+  p8HtmlR.innerHTML = romanize(resultRight.p8);
+  p12HtmlR.innerHTML = romanize(resultRight.p12);
+  p13HtmlR.innerHTML = romanize(resultRight.p13);
+  p14HtmlR.innerHTML = romanize(resultRight.p14);
 
-  console.log("data", data);
+  //all table
+  all1Html.innerHTML = resultAll.p1;
+  all2Html.innerHTML = resultAll.p2;
+  all3Html.innerHTML = resultAll.p3;
+  all4Html.innerHTML = resultAll.p4;
+  all5Html.innerHTML = resultAll.p5;
+  all6Html.innerHTML = resultAll.p6;
+  all7Html.innerHTML = resultAll.p7;
+  all8Html.innerHTML = resultAll.p8;
+  all13Html.innerHTML = resultAll.p13;
+  all14Html.innerHTML = resultAll.p14;
+
   //   table.classList.remove("none");
 }
 
@@ -138,24 +161,42 @@ function getValueSelect() {
   console.log(value);
 }
 
-function resultPsiPotret(data) {
-  const p1 = Number(data.day) > 22 ? Number(data.day) - 22 : Number(data.day);
-  const p2 = Number(data.month);
-  const p3 = data.year
+function sumYear(year) {
+  return year
     .split("")
     .reduce((sum, current) =>
       Number(sum) + Number(current) > 22
         ? Number(sum) + Number(current) - 22
         : Number(sum) + Number(current)
     );
-  const p4 = p1 + p2 > 22 ? p1 + p2 - 22 : p1 + p2;
-  const p5 = p2 + p3 > 22 ? p2 + p3 - 22 : p2 + p3;
-  const p6 = p4 + p5 > 22 ? p4 + p5 - 22 : p4 + p5;
-  const p7 = p1 + p5 > 22 ? p1 + p5 - 22 : p1 + p5;
-  const p8 = p2 + p6 > 22 ? p2 + p6 - 22 : p2 + p6;
-  const p12 = p7 + p8 > 22 ? p7 + p8 - 22 : p7 + p8;
-  const p13 = p1 + p4 + p6 > 22 ? p1 + p4 + p6 - 22 : p1 + p4 + p6;
-  const p14 = p3 + p5 + p6 > 22 ? p3 + p5 + p6 - 22 : p3 + p5 + p6;
+}
+
+function resultPsiPotretAll(left, right) {
+  console.log(left, right);
+  const p1 =
+    left.p1 + right.p1 > 22 ? left.p1 + right.p1 - 22 : left.p1 + right.p1;
+  const p2 =
+    left.p2 + right.p2 > 22 ? left.p2 + right.p2 - 22 : left.p2 + right.p2;
+  const p3 =
+    left.p3 + right.p3 > 22 ? left.p3 + right.p3 - 22 : left.p3 + right.p3;
+  const p4 =
+    left.p4 + right.p4 > 22 ? left.p4 + right.p4 - 22 : left.p4 + right.p4;
+  const p5 =
+    left.p5 + right.p5 > 22 ? left.p5 + right.p5 - 22 : left.p5 + right.p5;
+  const p6 =
+    left.p6 + right.p6 > 22 ? left.p6 + right.p6 - 22 : left.p6 + right.p6;
+  const p7 =
+    left.p7 + right.p7 > 22 ? left.p7 + right.p7 - 22 : left.p7 + right.p7;
+  const p8 =
+    left.p8 + right.p8 > 22 ? left.p8 + right.p8 - 22 : left.p8 + right.p8;
+  const p13 =
+    left.p13 + right.p13 > 22
+      ? left.p13 + right.p13 - 22
+      : left.p13 + right.p13;
+  const p14 =
+    left.p14 + right.p14 > 22
+      ? left.p14 + right.p14 - 22
+      : left.p14 + right.p14;
 
   return {
     p1: romanize(p1),
@@ -166,9 +207,36 @@ function resultPsiPotret(data) {
     p6: romanize(p6),
     p7: romanize(p7),
     p8: romanize(p8),
-    p12: romanize(p12),
     p13: romanize(p13),
     p14: romanize(p14),
+  };
+}
+
+function resultPsiPotretLeft(data) {
+  const p1 = Number(data.day) > 22 ? Number(data.day) - 22 : Number(data.day);
+  const p2 = Number(data.month);
+  const p3 = sumYear(data.year);
+  const p4 = p1 + p2 > 22 ? p1 + p2 - 22 : p1 + p2;
+  const p5 = p2 + p3 > 22 ? p2 + p3 - 22 : p2 + p3;
+  const p6 = p4 + p5 > 22 ? p4 + p5 - 22 : p4 + p5;
+  const p7 = p1 + p5 > 22 ? p1 + p5 - 22 : p1 + p5;
+  const p8 = p2 + p6 > 22 ? p2 + p6 - 22 : p2 + p6;
+  const p12 = p7 + p8 > 22 ? p7 + p8 - 22 : p7 + p8;
+  const p13 = p1 + p4 + p6 > 22 ? p1 + p4 + p6 - 22 : p1 + p4 + p6;
+  const p14 = p3 + p5 + p6 > 22 ? p3 + p5 + p6 - 22 : p3 + p5 + p6;
+
+  return {
+    p1,
+    p2,
+    p3,
+    p4,
+    p5,
+    p6,
+    p7,
+    p8,
+    p12,
+    p13,
+    p14,
   };
 }
 
