@@ -12,7 +12,8 @@ const p8Html = document.querySelector("#p8");
 const p12Html = document.querySelector("#p12");
 const p13Html = document.querySelector("#p13");
 const p14Html = document.querySelector("#p14");
-//
+//Полyчаем sub
+const subP13 = document.querySelector("#sub-p13");
 
 const date = document.querySelector("#date");
 
@@ -51,7 +52,11 @@ function resultPsiPotret(data) {
   const p2 = Number(data.month);
   const p3 = data.year
     .split("")
-    .reduce((sum, current) => Number(sum) + Number(current));
+    .reduce((sum, current) =>
+      Number(sum) + Number(current) > 22
+        ? Number(sum) + Number(current) - 22
+        : Number(sum) + Number(current)
+    );
   const p4 = p1 + p2 > 22 ? p1 + p2 - 22 : p1 + p2;
   const p5 = p2 + p3 > 22 ? p2 + p3 - 22 : p2 + p3;
   const p6 = p4 + p5 > 22 ? p4 + p5 - 22 : p4 + p5;
