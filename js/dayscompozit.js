@@ -27,6 +27,19 @@ const p12HtmlL = document.querySelector("#p12L");
 const p13HtmlL = document.querySelector("#p13L");
 const p14HtmlL = document.querySelector("#p14L");
 
+//
+const all1Html = document.querySelector("#all1");
+const all2Html = document.querySelector("#all2");
+const all3Html = document.querySelector("#all3");
+const all4Html = document.querySelector("#all4");
+const all5Html = document.querySelector("#all5");
+const all6Html = document.querySelector("#all6");
+const all7Html = document.querySelector("#all7");
+const all8Html = document.querySelector("#all8");
+const all12Html = document.querySelector("#all12");
+const all13Html = document.querySelector("#all13");
+const all14Html = document.querySelector("#all14");
+
 form.addEventListener("submit", getFormValue);
 function getFormValue(event) {
   event.preventDefault();
