@@ -153,3 +153,21 @@ button:hover {
   background-color: #8d6f5b;
   color: #fff;
 }
+
+section {
+  margin-top: 30px !important;
+  margin-bottom: 100px !important;
+}
+
+.footer {
+  position: fixed;
+  margin-top: 50px;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  background: #b19380;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  line-height: 1.5;
+}

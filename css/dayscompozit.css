@@ -9,3 +9,21 @@ h2.subtitle {
   font-size: 16px;
   font-weight: 400;
 }
+
+section {
+  margin-top: 30px !important;
+  margin-bottom: 100px !important;
+}
+
+.footer {
+  position: fixed;
+  margin-top: 50px;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  background: #b19380;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  line-height: 1.5;
+}
