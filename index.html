@@ -12,6 +12,61 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      .tbl {
+        border: 1px solid #000000;
+      }
+      .tbh {
+        border: 1px solid #3366ff;
+        background-color: #99ccff;
+        font-weight: bold;
+      }
+      .nil {
+        border: 1px solid #ffffff;
+        background-color: #ffffff;
+      }
+      .ind {
+        font-size: 24px;
+        font-weight: bold;
+        color: #000000;
+      }
+      .ind_s {
+        font-size: 16px;
+        font-weight: bold;
+        color: #000000;
+      }
+      .sub {
+        font-size: 12px;
+        color: #999999;
+      }
+      .sub_s {
+        font-size: 10px;
+        color: #999999;
+      }
+      .inda {
+        font-size: 18px;
+        font-weight: bold;
+        color: #000000;
+      }
+      .gray {
+        color: #999999;
+      }
+      .eso ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+      }
+      .eso ul li {
+        float: left;
+        padding: 1px;
+        font-size: 12px;
+      }
+      .anons {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+    </style>
   </head>
   <body>
     <nav>
@@ -48,15 +103,443 @@
         <h2>Добавьте дату рождения</h2>
         <form id="form" action="">
           <span>День:</span>
-          <input name="day" id="day" type="text" placeholder="01" />
+          <input
+            name="day"
+            id="day"
+            type="text"
+            maxlength="2"
+            placeholder="01"
+            required
+          />
           <span>Месяц:</span>
-          <input name="month" id="month" type="text" placeholder="01" />
+          <input
+            name="month"
+            id="month"
+            type="text"
+            maxlength="2"
+            placeholder="01"
+            required
+          />
           <span>Год:</span>
-          <input name="year" id="year" type="text" placeholder="1999" />
+          <input
+            name="year"
+            id="year"
+            type="text"
+            maxlength="4"
+            placeholder="1999"
+            required
+          />
           <button id="count-btn">Посчитать</button>
         </form>
       </div>
     </div>
+    <section class="container">
+      <tr>
+        <td>
+          <br />
+          <table border="0" align="center" class="none" id="table">
+            <tbody>
+              <tr>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">13</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind" id="p13">XXII</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">VIII + XX + XVI</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">14</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind" id="p14">XVIII</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">VI + XVIII + XVI</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  align="center"
+                  valign="middle"
+                  colspan="7"
+                  class="tbh"
+                  id="date"
+                >
+                  08.12.2022
+                </td>
+              </tr>
+              <tr>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">12</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind" id="p12">X</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">IV + VI</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">1</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind" id="p1">VIII</span><br /><span
+                            class="eso"
+                            ><ul>
+                              <li>Ж</li>
+                              <li title="Весы">♎</li>
+                              <li>
+                                <img
+                                  src="/air.jpg"
+                                  height="12"
+                                  width="12"
+                                  title="Воздух"
+                                  alt="Воздух"
+                                />
+                              </li>
+                              <li title="6 лет">T</li>
+                              <li title="Логика">Л</li>
+                              <li title="Пассивный">П</li>
+                              <li title="Духовный">Д</li>
+                              <li title="Магнетический">М</li>
+                            </ul></span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub"></span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">2</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind" id="p2">XII</span><br /><span
+                            class="eso"
+                            ><ul>
+                              <li>Н</li>
+                              <li title="Нептун">♆</li>
+                              <li>
+                                <img
+                                  src="/water.jpg"
+                                  height="12"
+                                  width="12"
+                                  title="Вода"
+                                  alt="Вода"
+                                />
+                              </li>
+                              <li title="81 год или никогда">T</li>
+                              <li title="Интуиция">И</li>
+                              <li title="Пассивный">П</li>
+                              <li title="Духовный">Д</li>
+                              <li title="Магнетический">М</li>
+                            </ul></span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub"></span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">3</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind" id="p3">VI</span><br /><span
+                            class="eso"
+                            ><ul>
+                              <li>Н</li>
+                              <li title="Телец">♉</li>
+                              <li>
+                                <img
+                                  src="/water.jpg"
+                                  height="12"
+                                  width="12"
+                                  title="Вода"
+                                  alt="Вода"
+                                />
+                              </li>
+                              <li title="2 месяца">T</li>
+                              <li title="Интуиция">И</li>
+                              <li title="Активный">А</li>
+                              <li title="Материальный">М</li>
+                              <li title="Магнетический">М</li>
+                            </ul></span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub"></span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">7</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind" id="p7">IV</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">XX + VI</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">4</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind" id="p4">XX</span><br /><span
+                            class="eso"
+                            ><ul>
+                              <li>Н</li>
+                              <li title="Юпитер">♃</li>
+                              <li>
+                                <img
+                                  src="/earth.jpg"
+                                  height="12"
+                                  width="12"
+                                  title="Земля"
+                                  alt="Земля"
+                                />
+                              </li>
+                              <li title="6 лет">T</li>
+                              <li title="Логика">Л</li>
+                              <li title="Пассивный">П</li>
+                              <li title="Духовный">Д</li>
+                              <li title="Магнетический">М</li>
+                            </ul></span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">VIII + XII</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">5</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind" id="p5">XVIII</span><br /><span
+                            class="eso"
+                            ><ul>
+                              <li>Ж</li>
+                              <li title="Рак">♋</li>
+                              <li>
+                                <img
+                                  src="/water.jpg"
+                                  height="12"
+                                  width="12"
+                                  title="Вода"
+                                  alt="Вода"
+                                />
+                              </li>
+                              <li title="28 дней">T</li>
+                              <li title="Интуиция">И</li>
+                              <li title="Пассивный">П</li>
+                              <li title="Духовный">Д</li>
+                              <li title="Магнетический">М</li>
+                            </ul></span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">XII + VI</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+              </tr>
+              <tr>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">6</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind" id="p6">XVI</span><br /><span
+                            class="eso"
+                            ><ul>
+                              <li>Н</li>
+                              <li title="Стрелец">♐</li>
+                              <li>
+                                <img
+                                  src="/earth.jpg"
+                                  height="12"
+                                  width="12"
+                                  title="Земля"
+                                  alt="Земля"
+                                />
+                              </li>
+                              <li title="15 лет">T</li>
+                              <li title="Логика">Л</li>
+                              <li title="Активный">А</li>
+                              <li title="Материальный">М</li>
+                              <li title="Магнетический">М</li>
+                            </ul></span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">XX + XVIII</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+              </tr>
+              <tr>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%" align="center" valign="middle">
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub">8</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="ind">VI</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">
+                          <span class="sub" id="p8">XII + XVI</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+                <td width="14%">&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </section>
     <script src="js/script.js"></script>
   </body>
 </html>
