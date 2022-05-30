@@ -62,6 +62,8 @@ const taroTable = [
   {
     position: 1,
     sex: "М",
+    zodiac: "/U+264A",
+    time: "44Д",
     element: "../img/air.jpg",
     logic: "Л",
     aktPas: "А",
@@ -71,6 +73,8 @@ const taroTable = [
   {
     position: 2,
     sex: "Ж",
+    zodiac: "/263D",
+    time: "14Д",
     element: "../img/water.jpg",
     logic: "И",
     aktPas: "П",
@@ -80,6 +84,8 @@ const taroTable = [
   {
     position: 3,
     sex: "Ж",
+    zodiac: "/U+2640",
+    time: "2М",
     element: "../img/earth.jpg",
     logic: "Л",
     aktPas: "П",
@@ -89,6 +95,8 @@ const taroTable = [
   {
     position: 4,
     sex: "М",
+    zodiac: "/U+2642",
+    time: "11М",
     element: "../img/fire.jpg",
     logic: "Л",
     aktPas: "А",
@@ -98,6 +106,8 @@ const taroTable = [
   {
     position: 5,
     sex: "М",
+    zodiac: "/U+2644",
+    time: "15Л",
     element: "../img/air.jpg",
     logic: "И",
     aktPas: "А",
@@ -107,6 +117,8 @@ const taroTable = [
   {
     position: 6,
     sex: "Н",
+    zodiac: "/U+2649",
+    time: "2М",
     element: "../img/water.jpg",
     logic: "И",
     aktPas: "А",
@@ -116,6 +128,8 @@ const taroTable = [
   {
     position: 7,
     sex: "М",
+    zodiac: "/U+26E2",
+    time: "42Г",
     element: "../img/fire.jpg",
     logic: "Л",
     aktPas: "А",
@@ -125,6 +139,8 @@ const taroTable = [
   {
     position: 8,
     sex: "Ж",
+    zodiac: "/U+264E",
+    time: "6Л",
     element: "../img/air.jpg",
     logic: "Л",
     aktPas: "П",
@@ -134,6 +150,8 @@ const taroTable = [
   {
     position: 9,
     sex: "Н",
+    zodiac: "/U+2651",
+    time: "15Л",
     element: "../img/earth.jpg",
     logic: "И",
     aktPas: "А",
@@ -143,6 +161,8 @@ const taroTable = [
   {
     position: 10,
     sex: "Н",
+    zodiac: "/U+264F",
+    time: "6Л",
     element: "../img/earth.jpg",
     logic: "Л",
     aktPas: "А",
@@ -152,6 +172,8 @@ const taroTable = [
   {
     position: 11,
     sex: "М",
+    zodiac: "/U+264F",
+    time: "6Л",
     element: "../img/fire.jpg",
     logic: "И",
     aktPas: "А",
@@ -161,6 +183,8 @@ const taroTable = [
   {
     position: 12,
     sex: "Н",
+    zodiac: "/U+264F",
+    time: "6Л",
     element: "../img/water.jpg",
     logic: "И",
     aktPas: "П",
@@ -170,6 +194,8 @@ const taroTable = [
   {
     position: 13,
     sex: "Ж",
+    zodiac: "/U+264F",
+    time: "6Л",
     element: "../img/fire.jpg",
     logic: "И",
     aktPas: "А",
@@ -179,6 +205,8 @@ const taroTable = [
   {
     position: 14,
     sex: "Н",
+    zodiac: "/U+264F",
+    time: "6Л",
     element: "../img/air.jpg",
     logic: "Л",
     aktPas: "П",
@@ -188,6 +216,8 @@ const taroTable = [
   {
     position: 15,
     sex: "М",
+    zodiac: "/U+264F",
+    time: "6Л",
     element: "../img/fire.jpg",
     logic: "И",
     aktPas: "А",
@@ -197,6 +227,8 @@ const taroTable = [
   {
     position: 16,
     sex: "Н",
+    zodiac: "/U+264F",
+    time: "6Л",
     element: "../img/earth.jpg",
     logic: "Л",
     aktPas: "А",
@@ -206,6 +238,8 @@ const taroTable = [
   {
     position: 17,
     sex: "Ж",
+    zodiac: "/U+264F",
+    time: "6Л",
     element: "../img/water.jpg",
     logic: "И",
     aktPas: "А",
@@ -215,6 +249,8 @@ const taroTable = [
   {
     position: 18,
     sex: "Ж",
+    zodiac: "/U+264F",
+    time: "6Л",
     element: "../img/water.jpg",
     logic: "И",
     aktPas: "П",
@@ -224,6 +260,8 @@ const taroTable = [
   {
     position: 19,
     sex: "М",
+    zodiac: "/U+264F",
+    time: "6Л",
     element: "../img/fire.jpg",
     logic: "Л",
     aktPas: "А",
@@ -233,6 +271,8 @@ const taroTable = [
   {
     position: 20,
     sex: "Н",
+    zodiac: "/U+264F",
+    time: "6Л",
     element: "../img/earth.jpg",
     logic: "Л",
     aktPas: "П",
@@ -242,6 +282,8 @@ const taroTable = [
   {
     position: 21,
     sex: "Н",
+    zodiac: "/U+264F",
+    time: "6Л",
     element: "../img/air.jpg",
     logic: "И",
     aktPas: "А",
@@ -251,6 +293,8 @@ const taroTable = [
   {
     position: 22,
     sex: "Н",
+    zodiac: "/U+264F",
+    time: "6Л",
     element: "../img/fire.jpg",
     logic: "И",
     aktPas: "А",
