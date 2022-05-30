@@ -165,16 +165,31 @@ section {
   margin-top: 30px !important;
   margin-bottom: 100px !important;
 }
-/* 
+/* --------------------FOOTER----------------- */
 .footer {
-  position: absolute;
-  margin-top: 50px;
   left: 0;
   bottom: 0;
   padding: 10px;
-  background: #b19380;
-  color: #fff;
+  background: #99ccff;
+  color: rgb(36, 36, 36);
   width: 100%;
   text-align: center;
   line-height: 1.5;
-} */
+  font-size: 14px;
+}
+
+.footer p {
+  font-size: 12px;
+}
+a.contacts {
+  text-decoration: none;
+  color: rgb(36, 36, 36);
+  font-weight: 900;
+  transition: all 0.5s ease;
+}
+
+a.contacts:hover {
+  border-bottom: 2px solid #fff;
+  color: #fff;
+}
+/* --------------------FOOTER----------------- */
