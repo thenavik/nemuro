@@ -57,7 +57,7 @@ const date = document.querySelector("#date");
 const taroTable1 = {
   position: 1,
   sex: "М",
-  element: "воздух",
+  element: "../img/air.jpg",
   logic: "Л",
   aktPas: "А",
   soul: "Д",
@@ -67,10 +67,190 @@ const taroTable1 = {
 const taroTable2 = {
   position: 2,
   sex: "Ж",
-  element: "воздух",
+  element: "../img/water.jpg",
+  logic: "И",
+  aktPas: "П",
+  soul: "Д",
+  electric: "М",
+};
+const taroTable3 = {
+  position: 3,
+  sex: "Ж",
+  element: "../img/earth.jpg",
+  logic: "Л",
+  aktPas: "П",
+  soul: "М",
+  electric: "М",
+};
+const taroTable4 = {
+  position: 4,
+  sex: "М",
+  element: "../img/fire.jpg",
   logic: "Л",
   aktPas: "А",
+  soul: "М",
+  electric: "Э",
+};
+const taroTable5 = {
+  position: 5,
+  sex: "М",
+  element: "../img/air.jpg",
+  logic: "И",
+  aktPas: "А",
+  soul: "М",
+  electric: "М",
+};
+const taroTable6 = {
+  position: 6,
+  sex: "Н",
+  element: "../img/water.jpg",
+  logic: "И",
+  aktPas: "А",
+  soul: "М",
+  electric: "М",
+};
+const taroTable7 = {
+  position: 7,
+  sex: "М",
+  element: "../img/fire.jpg",
+  logic: "Л",
+  aktPas: "А",
+  soul: "М",
+  electric: "Э",
+};
+const taroTable8 = {
+  position: 8,
+  sex: "Ж",
+  element: "../img/air.jpg",
+  logic: "Л",
+  aktPas: "П",
   soul: "Д",
+  electric: "М",
+};
+const taroTable9 = {
+  position: 9,
+  sex: "Н",
+  element: "../img/earth.jpg",
+  logic: "И",
+  aktPas: "А",
+  soul: "Д",
+  electric: "М",
+};
+const taroTable10 = {
+  position: 10,
+  sex: "Н",
+  element: "../img/earth.jpg",
+  logic: "Л",
+  aktPas: "А",
+  soul: "М",
+  electric: "Э",
+};
+const taroTable11 = {
+  position: 11,
+  sex: "М",
+  element: "../img/fire.jpg",
+  logic: "И",
+  aktPas: "А",
+  soul: "М",
+  electric: "Э",
+};
+const taroTable12 = {
+  position: 12,
+  sex: "Н",
+  element: "../img/water.jpg",
+  logic: "И",
+  aktPas: "П",
+  soul: "Д",
+  electric: "М",
+};
+const taroTable13 = {
+  position: 13,
+  sex: "Ж",
+  element: "../img/fire.jpg",
+  logic: "И",
+  aktPas: "А",
+  soul: "Д",
+  electric: "Э",
+};
+const taroTable14 = {
+  position: 14,
+  sex: "Н",
+  element: "../img/air.jpg",
+  logic: "Л",
+  aktPas: "П",
+  soul: "Д",
+  electric: "М",
+};
+const taroTable15 = {
+  position: 15,
+  sex: "М",
+  element: "../img/fire.jpg",
+  logic: "И",
+  aktPas: "А",
+  soul: "М",
+  electric: "Э",
+};
+const taroTable16 = {
+  position: 16,
+  sex: "Н",
+  element: "../img/earth.jpg",
+  logic: "Л",
+  aktPas: "А",
+  soul: "М",
+  electric: "М",
+};
+const taroTable17 = {
+  position: 17,
+  sex: "Ж",
+  element: "../img/water.jpg",
+  logic: "И",
+  aktPas: "А",
+  soul: "Д",
+  electric: "М",
+};
+const taroTable18 = {
+  position: 18,
+  sex: "Ж",
+  element: "../img/water.jpg",
+  logic: "И",
+  aktPas: "П",
+  soul: "Д",
+  electric: "М",
+};
+const taroTable19 = {
+  position: 19,
+  sex: "М",
+  element: "../img/fire.jpg",
+  logic: "Л",
+  aktPas: "А",
+  soul: "М",
+  electric: "Э",
+};
+const taroTable20 = {
+  position: 20,
+  sex: "Н",
+  element: "../img/earth.jpg",
+  logic: "Л",
+  aktPas: "П",
+  soul: "Д",
+  electric: "М",
+};
+const taroTable21 = {
+  position: 21,
+  sex: "Н",
+  element: "../img/air.jpg",
+  logic: "И",
+  aktPas: "А",
+  soul: "М",
+  electric: "Э",
+};
+const taroTable22 = {
+  position: 22,
+  sex: "Н",
+  element: "../img/fire.jpg",
+  logic: "И",
+  aktPas: "А",
+  soul: "М",
   electric: "Э",
 };
 
