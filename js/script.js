@@ -24,10 +24,55 @@ const topAnswer12 = document.querySelector("#topAnswer12");
 const topAnswer13 = document.querySelector("#topAnswer13");
 const topAnswer14 = document.querySelector("#topAnswer14");
 
+// Отдельные позиции (Individual items)
+
+const gray9 = document.querySelector("#gray9");
+const gray10 = document.querySelector("#gray10");
+const gray11 = document.querySelector("#gray11");
+const gray15 = document.querySelector("#gray15");
+const gray16 = document.querySelector("#gray16");
+const gray17 = document.querySelector("#gray17");
+const gray18 = document.querySelector("#gray18");
+const gray19 = document.querySelector("#gray19");
+const gray20 = document.querySelector("#gray20");
+const gray21 = document.querySelector("#gray21");
+
+// result Individual items
+const grayAnswer9 = document.querySelector("#grayAnswer9");
+const grayAnswer10 = document.querySelector("#grayAnswer10");
+const grayAnswer11 = document.querySelector("#grayAnswer11");
+const grayAnswer15 = document.querySelector("#grayAnswer15");
+const grayAnswer16 = document.querySelector("#grayAnswer16");
+const grayAnswer17 = document.querySelector("#grayAnswer17");
+const grayAnswer18 = document.querySelector("#grayAnswer18");
+const grayAnswer19 = document.querySelector("#grayAnswer19");
+const grayAnswer20 = document.querySelector("#grayAnswer20");
+const grayAnswer21 = document.querySelector("#grayAnswer21");
+
 //Полyчаем sub
 const subP13 = document.querySelector("#sub-p13");
 
 const date = document.querySelector("#date");
+
+const taroTable1 = {
+  position: 1,
+  sex: "М",
+  element: "воздух",
+  logic: "Л",
+  aktPas: "А",
+  soul: "Д",
+  electric: "Э",
+};
+
+const taroTable2 = {
+  position: 2,
+  sex: "Ж",
+  element: "воздух",
+  logic: "Л",
+  aktPas: "А",
+  soul: "Д",
+  electric: "Э",
+};
 
 form.addEventListener("submit", getFormValue);
 function getFormValue(event) {
@@ -44,29 +89,133 @@ function getFormValue(event) {
     year: year.value,
   };
   const result = resultPsiPotret(data);
-  p1Html.innerHTML = result.p1;
-  p2Html.innerHTML = result.p2;
-  p3Html.innerHTML = result.p3;
-  p4Html.innerHTML = result.p4;
-  p5Html.innerHTML = result.p5;
-  p6Html.innerHTML = result.p6;
-  p7Html.innerHTML = result.p7;
-  p8Html.innerHTML = result.p8;
-  p12Html.innerHTML = result.p12;
-  p13Html.innerHTML = result.p13;
-  p14Html.innerHTML = result.p14;
+  p1Html.innerHTML = romanize(result.p1);
+  p2Html.innerHTML = romanize(result.p2);
+  p3Html.innerHTML = romanize(result.p3);
+  p4Html.innerHTML = romanize(result.p4);
+  p5Html.innerHTML = romanize(result.p5);
+  p6Html.innerHTML = romanize(result.p6);
+  p7Html.innerHTML = romanize(result.p7);
+  p8Html.innerHTML = romanize(result.p8);
+  p12Html.innerHTML = romanize(result.p12);
+  p13Html.innerHTML = romanize(result.p13);
+  p14Html.innerHTML = romanize(result.p14);
 
   date.innerHTML = `${data.day}.${data.month}.${data.year}`;
 
-  topAnswer4.innerHTML = `${result.p1} + ${result.p2}`;
-  topAnswer5.innerHTML = `${result.p2} + ${result.p3}`;
-  topAnswer6.innerHTML = `${result.p4} + ${result.p5}`;
-  topAnswer7.innerHTML = `${result.p1} + ${result.p5}`;
-  topAnswer8.innerHTML = `${result.p2} + ${result.p6}`;
-  topAnswer12.innerHTML = `${result.p7} + ${result.p8}`;
-  topAnswer13.innerHTML = `${result.p1} + ${result.p4} + ${result.p6}`;
-  topAnswer14.innerHTML = `${result.p3} + ${result.p5} + ${result.p6}`;
-  //   console.log("data", );
+  topAnswer4.innerHTML = `${romanize(result.p1)} + ${romanize(result.p2)}`;
+  topAnswer5.innerHTML = `${romanize(result.p2)} + ${romanize(result.p3)}`;
+  topAnswer6.innerHTML = `${romanize(result.p4)} + ${romanize(result.p5)}`;
+  topAnswer7.innerHTML = `${romanize(result.p1)} + ${romanize(result.p5)}`;
+  topAnswer8.innerHTML = `${romanize(result.p2)} + ${romanize(result.p6)}`;
+  topAnswer12.innerHTML = `${romanize(result.p7)} + ${romanize(result.p8)}`;
+  topAnswer13.innerHTML = `${romanize(result.p1)} + ${romanize(
+    result.p4
+  )} + ${romanize(result.p6)}`;
+  topAnswer14.innerHTML = `${romanize(result.p3)} + ${romanize(
+    result.p5
+  )} + ${romanize(result.p6)}`;
+
+  const gray9Res =
+    (result.p2 - result.p1 > 22
+      ? result.p2 - result.p1 - 22
+      : result.p2 - result.p1) < 0
+      ? result.p1 - result.p2 > 22
+        ? result.p1 - result.p2 - 22
+        : result.p1 - result.p2 > 22
+        ? result.p1 - result.p2 - 22
+        : result.p1 - result.p2
+      : result.p2 - result.p1;
+  const gray10Res =
+    (result.p3 - result.p2 > 22
+      ? result.p3 - result.p2 - 22
+      : result.p3 - result.p2) < 0
+      ? result.p2 - result.p3 > 22
+        ? result.p2 - result.p3 - 22
+        : result.p2 - result.p3
+      : result.p3 - result.p2 > 22
+      ? result.p3 - result.p2 - 22
+      : result.p3 - result.p2;
+  const gray11Res =
+    gray9Res - gray10Res < 0 ? gray10Res - gray9Res : gray9Res - gray10Res;
+
+  gray9.innerHTML = romanize(gray9Res);
+  gray10.innerHTML = romanize(gray10Res);
+  gray11.innerHTML = romanize(gray11Res);
+  gray15.innerHTML = romanize(gray9Res + gray10Res + gray11Res);
+  gray16.innerHTML = romanize(
+    result.p1 + result.p3 + result.p4 + result.p5 > 22
+      ? result.p1 + result.p3 + result.p4 + result.p5 - 22 > 22
+        ? result.p1 + result.p3 + result.p4 + result.p5 - 22 - 22
+        : result.p1 + result.p3 + result.p4 + result.p5 - 22
+      : result.p1 + result.p3 + result.p4 + result.p5
+  );
+  gray17.innerHTML = romanize(
+    gray11Res + result.p6 > 22
+      ? gray11Res + result.p6 - 22
+      : gray11Res + result.p6
+  );
+  gray18.innerHTML = romanize(
+    gray11Res + result.p8 > 22
+      ? gray11Res + result.p8 - 22
+      : gray11Res + result.p8
+  );
+  gray19.innerHTML = romanize(
+    result.p4 + result.p6 > 22
+      ? result.p4 + result.p6 - 22
+      : result.p4 + result.p6
+  );
+  gray20.innerHTML = romanize(
+    result.p5 + result.p6 > 22
+      ? result.p5 + result.p6 - 22
+      : result.p5 + result.p6
+  );
+  gray21.innerHTML = romanize(
+    result.p1 + result.p2 + result.p3 + result.p4 + result.p5 + result.p6 > 22
+      ? result.p1 +
+          result.p2 +
+          result.p3 +
+          result.p4 +
+          result.p5 +
+          result.p6 -
+          22 >
+        22
+        ? result.p1 +
+          result.p2 +
+          result.p3 +
+          result.p4 +
+          result.p5 +
+          result.p6 -
+          22 -
+          22
+        : result.p1 +
+          result.p2 +
+          result.p3 +
+          result.p4 +
+          result.p5 +
+          result.p6 -
+          22
+      : result.p1 + result.p2 + result.p3 + result.p4 + result.p5 + result.p6
+  );
+
+  grayAnswer9.innerHTML = `${romanize(result.p2)} - ${romanize(result.p1)}`;
+  grayAnswer10.innerHTML = `${romanize(result.p3)} - ${romanize(result.p2)}`;
+  grayAnswer11.innerHTML = `${romanize(gray10Res)} - ${romanize(gray9Res)}`;
+  grayAnswer15.innerHTML = `${romanize(gray9Res)} + ${romanize(
+    gray10Res
+  )} + ${romanize(gray11Res)}`;
+  grayAnswer16.innerHTML = `${romanize(result.p1)} + ${romanize(
+    result.p3
+  )} + ${romanize(result.p4)} + ${romanize(result.p5)}`;
+  grayAnswer17.innerHTML = `${romanize(gray11Res)} + ${romanize(result.p6)}`;
+  grayAnswer18.innerHTML = `${romanize(gray11Res)} + ${romanize(result.p8)}`;
+  grayAnswer19.innerHTML = `${romanize(result.p4)} + ${romanize(result.p6)}`;
+  grayAnswer20.innerHTML = `${romanize(result.p5)} + ${romanize(result.p6)}`;
+  grayAnswer21.innerHTML = `${romanize(result.p1)} + ${romanize(
+    result.p2
+  )} + ${romanize(result.p3)} + ${romanize(result.p4)} + ${romanize(
+    result.p5
+  )} + ${romanize(result.p6)}`;
 }
 
 function resultPsiPotret(data) {
@@ -89,17 +238,17 @@ function resultPsiPotret(data) {
   const p14 = p3 + p5 + p6 > 22 ? p3 + p5 + p6 - 22 : p3 + p5 + p6;
 
   return {
-    p1: romanize(p1),
-    p2: romanize(p2),
-    p3: romanize(p3),
-    p4: romanize(p4),
-    p5: romanize(p5),
-    p6: romanize(p6),
-    p7: romanize(p7),
-    p8: romanize(p8),
-    p12: romanize(p12),
-    p13: romanize(p13),
-    p14: romanize(p14),
+    p1,
+    p2,
+    p3,
+    p4,
+    p5,
+    p6,
+    p7,
+    p8,
+    p12,
+    p13,
+    p14,
   };
 }
 
