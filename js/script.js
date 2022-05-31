@@ -451,11 +451,25 @@ function getFormValue(event) {
   }
   // console.log("ff", filtrTaroTable(result.p1)[0].sex);
   taroArr1.children[0].innerHTML = filtrTaroTable(result.p1)[0].sex;
+  taroArr1.children[1].innerHTML = filtrTaroTable(result.p1)[0].zodiac;
+  taroArr1.children[1].title = filtrTaroTable(result.p1)[0].zodiac;
   taroArr1.children[2].children[0].src = filtrTaroTable(result.p1)[0].element;
-  taroArr1.children[3].innerHTML = filtrTaroTable(result.p1)[0].sex;
+  // taroArr1.children[3].innerHTML = filtrTaroTable(result.p1)[0].sex;
   // taroArr1.children[2].innerHTML = filtrTaroTable(result.p1)[0].sex;
   // taroArr1.children[3].innerHTML = filtrTaroTable(result.p1)[0].sex;
   // taroArr1.children[4].innerHTML = filtrTaroTable(result.p1)[0].sex;
+
+  // {
+  //   position: 1,
+  //   sex: "М",
+  //   zodiac: "/U+264A",
+  //   time: "44Д",
+  //   element: "../img/air.jpg",
+  //   logic: "Л",
+  //   aktPas: "А",
+  //   soul: "Д",
+  //   electric: "Э",
+  // }
 }
 
 function resultPsiPotret(data) {
