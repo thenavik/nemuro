@@ -45,7 +45,9 @@ div.header-container a {
 #logo:hover {
   color: #fff;
 }
-
+.mt2 {
+  margin-top: 2rem;
+}
 ul {
   display: flex;
   justify-content: space-between;

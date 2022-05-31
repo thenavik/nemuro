@@ -57,6 +57,34 @@ const taroArr4 = document.querySelector("#taroArr4");
 const taroArr5 = document.querySelector("#taroArr5");
 const taroArr6 = document.querySelector("#taroArr6");
 
+// middle
+const midA = document.querySelector("#midA");
+const midASub = document.querySelector("#midA-sub");
+
+const midG1 = document.querySelector("#midG1");
+const midG1Sub = document.querySelector("#midG1-sub");
+
+const midB = document.querySelector("#midB");
+const midBSub = document.querySelector("#midB-sub");
+
+const midC = document.querySelector("#midC");
+const midCSub = document.querySelector("#midC-sub");
+
+const midG2 = document.querySelector("#midG2");
+const midG2Sub = document.querySelector("#midG2-sub");
+
+const midD = document.querySelector("#midD");
+const midDSub = document.querySelector("#midD-sub");
+
+const midE = document.querySelector("#midE");
+const midESub = document.querySelector("#midE-sub");
+
+const midF = document.querySelector("#midF");
+const midFSub = document.querySelector("#midF-sub");
+
+const midH = document.querySelector("#midH");
+const midHSub = document.querySelector("#midH-sub");
+
 // console.log("ff", taroArr1.children[3]);
 //Полyчаем sub
 const subP13 = document.querySelector("#sub-p13");
@@ -875,6 +903,61 @@ function getFormValue(event) {
   addToTaroTable(taroArr4, result.p4);
   addToTaroTable(taroArr5, result.p5);
   addToTaroTable(taroArr6, result.p6);
+
+  const midARes =
+    result.p1 + result.p4 > 22
+      ? result.p1 + result.p4 - 22
+      : result.p1 + result.p4;
+
+  const midBRes =
+    result.p2 + result.p4 > 22
+      ? result.p2 + result.p4 - 22
+      : result.p2 + result.p4;
+
+  const midCRes =
+    result.p2 + result.p5 > 22
+      ? result.p2 + result.p5 - 22
+      : result.p2 + result.p5;
+
+  const midDRes =
+    result.p3 + result.p5 > 22
+      ? result.p3 + result.p5 - 22
+      : result.p3 + result.p5;
+
+  const midERes =
+    result.p4 + result.p6 > 22
+      ? result.p4 + result.p6 - 22
+      : result.p4 + result.p6;
+
+  const midFRes =
+    result.p5 + result.p6 > 22
+      ? result.p5 + result.p6 - 22
+      : result.p5 + result.p6;
+
+  midA.innerHTML = romanize(midARes);
+  midASub.innerHTML = `${romanize(result.p1)} + ${romanize(result.p4)}`;
+
+  midB.innerHTML = romanize(midBRes);
+  midBSub.innerHTML = `${romanize(result.p2)} + ${romanize(result.p4)}`;
+
+  midC.innerHTML = romanize(midCRes);
+  midCSub.innerHTML = `${romanize(result.p2)} + ${romanize(result.p5)}`;
+
+  midD.innerHTML = romanize(midDRes);
+  midDSub.innerHTML = `${romanize(result.p3)} + ${romanize(result.p5)}`;
+
+  midE.innerHTML = romanize(midERes);
+  midESub.innerHTML = `${romanize(result.p4)} + ${romanize(result.p6)}`;
+
+  midF.innerHTML = romanize(midFRes);
+  midFSub.innerHTML = `${romanize(result.p5)} + ${romanize(result.p6)}`;
+
+  midG1.innerHTML = romanize(midCRes + midDRes);
+  midG1Sub.innerHTML = `${romanize(midCRes)} + ${romanize(midDRes)}`;
+  midG2.innerHTML = romanize(midBRes + midFRes);
+  midG2Sub.innerHTML = `${romanize(midBRes)} + ${romanize(midFRes)}`;
+  midH.innerHTML = romanize(midARes + midERes);
+  midG2Sub.innerHTML = `${romanize(midARes)} + ${romanize(midERes)}`;
 }
 
 function resultPsiPotret(data) {
