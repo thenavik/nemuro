@@ -70,8 +70,11 @@ const taroTable = [
       type: "М",
       name: "Муж",
     },
-    zodiac: "/U+264A",
-    time: "44Д",
+    zodiac: {
+      type: "&#9807;",
+      name: "Близнецы",
+    },
+    time: "44д",
     element: "../img/air.jpg",
     logic: {
       type: "Л",
@@ -92,234 +95,612 @@ const taroTable = [
   },
   {
     position: 2,
-    sex: "Ж",
-    zodiac: "/263D",
-    time: "14Д",
+    sex: {
+      type: "Ж",
+      name: "Жен",
+    },
+    zodiac: {
+      type: "&#9789;",
+      name: "Луна",
+    },
+    time: "14д",
     element: "../img/water.jpg",
-    logic: "И",
-    aktPas: "П",
-    soul: "Д",
-    electric: "М",
+    logic: {
+      type: "И",
+      name: "Интуициая",
+    },
+    aktPas: {
+      type: "П",
+      name: "Пассив",
+    },
+    soul: {
+      type: "Д",
+      name: "Душа",
+    },
+    electric: {
+      type: "М",
+      name: "Магнет",
+    },
   },
   {
     position: 3,
-    sex: "Ж",
-    zodiac: "/U+2640",
-    time: "2М",
+    sex: {
+      type: "Ж",
+      name: "Жен",
+    },
+    zodiac: {
+      type: "&#9792;",
+      name: "Венера",
+    },
+    time: "2м",
     element: "../img/earth.jpg",
-    logic: "Л",
-    aktPas: "П",
-    soul: "М",
-    electric: "М",
+    logic: {
+      type: "Л",
+      name: "Логика",
+    },
+    aktPas: {
+      type: "П",
+      name: "Пассив",
+    },
+    soul: {
+      type: "М",
+      name: "Матер",
+    },
+    electric: {
+      type: "М",
+      name: "Магнет",
+    },
   },
   {
     position: 4,
-    sex: "М",
-    zodiac: "/U+2642",
-    time: "11М",
+    sex: {
+      type: "М",
+      name: "Муж",
+    },
+    zodiac: {
+      type: "&#9794;",
+      name: "Марс",
+    },
+    time: "11м",
     element: "../img/fire.jpg",
-    logic: "Л",
-    aktPas: "А",
-    soul: "М",
-    electric: "Э",
+    logic: {
+      type: "Л",
+      name: "Логика",
+    },
+    aktPas: {
+      type: "А",
+      name: "Актив",
+    },
+    soul: {
+      type: "М",
+      name: "Матер",
+    },
+    electric: {
+      type: "Э",
+      name: "Электр",
+    },
   },
   {
     position: 5,
-    sex: "М",
-    zodiac: "/U+2644",
-    time: "15Л",
+    sex: {
+      type: "М",
+      name: "Муж",
+    },
+    zodiac: {
+      type: "&#9796;",
+      name: "Сатурн",
+    },
+    time: "15л",
     element: "../img/air.jpg",
-    logic: "И",
-    aktPas: "А",
-    soul: "М",
-    electric: "М",
+    logic: {
+      type: "И",
+      name: "Интуиция",
+    },
+    aktPas: {
+      type: "А",
+      name: "Актив",
+    },
+    soul: {
+      type: "М",
+      name: "Матер",
+    },
+    electric: {
+      type: "М",
+      name: "Магнет",
+    },
   },
   {
     position: 6,
-    sex: "Н",
-    zodiac: "/U+2649",
-    time: "2М",
+    sex: {
+      type: "Н",
+      name: "Нейтральный",
+    },
+    zodiac: {
+      type: "&#9801;",
+      name: "Телец",
+    },
+    time: "2м",
     element: "../img/water.jpg",
-    logic: "И",
-    aktPas: "А",
-    soul: "М",
-    electric: "М",
+    logic: {
+      type: "И",
+      name: "Интуиция",
+    },
+    aktPas: {
+      type: "А",
+      name: "Актив",
+    },
+    soul: {
+      type: "М",
+      name: "Матер",
+    },
+    electric: {
+      type: "М",
+      name: "Магнет",
+    },
   },
   {
     position: 7,
-    sex: "М",
-    zodiac: "/U+26E2",
-    time: "42Г",
+    sex: {
+      type: "М",
+      name: "Муж",
+    },
+    zodiac: {
+      type: "&#9797;",
+      name: "Уран",
+    },
+    time: "42г",
     element: "../img/fire.jpg",
-    logic: "Л",
-    aktPas: "А",
-    soul: "М",
-    electric: "Э",
+    logic: {
+      type: "Л",
+      name: "Логика",
+    },
+    aktPas: {
+      type: "А",
+      name: "Актив",
+    },
+    soul: {
+      type: "М",
+      name: "Матер",
+    },
+    electric: {
+      type: "Э",
+      name: "Электр",
+    },
   },
   {
     position: 8,
-    sex: "Ж",
-    zodiac: "/U+264E",
-    time: "6Л",
+    sex: {
+      type: "Ж",
+      name: "Жен",
+    },
+    zodiac: {
+      type: "&#9806;",
+      name: "Весы",
+    },
+    time: "6л",
     element: "../img/air.jpg",
-    logic: "Л",
-    aktPas: "П",
-    soul: "Д",
-    electric: "М",
+    logic: {
+      type: "Л",
+      name: "Логика",
+    },
+    aktPas: {
+      type: "П",
+      name: "Пассив",
+    },
+    soul: {
+      type: "Д",
+      name: "Душа",
+    },
+    electric: {
+      type: "М",
+      name: "Магнет",
+    },
   },
   {
     position: 9,
-    sex: "Н",
-    zodiac: "/U+2651",
-    time: "15Л",
+    sex: {
+      type: "Н",
+      name: "Нейтральный",
+    },
+    zodiac: {
+      type: "&#9809;",
+      name: "Козерог",
+    },
+    time: "15л",
     element: "../img/earth.jpg",
-    logic: "И",
-    aktPas: "А",
-    soul: "Д",
-    electric: "М",
+    logic: {
+      type: "И",
+      name: "Интуиция",
+    },
+    aktPas: {
+      type: "А",
+      name: "Актив",
+    },
+    soul: {
+      type: "Д",
+      name: "Душа",
+    },
+    electric: {
+      type: "М",
+      name: "Магнет",
+    },
   },
   {
     position: 10,
-    sex: "Н",
-    zodiac: "/U+264F",
-    time: "6Л",
+    sex: {
+      type: "Н",
+      name: "Нейтральный",
+    },
+    zodiac: {
+      type: "&#9807;",
+      name: "Скорпион",
+    },
+    time: "6л",
     element: "../img/earth.jpg",
-    logic: "Л",
-    aktPas: "А",
-    soul: "М",
-    electric: "Э",
+    logic: {
+      type: "Л",
+      name: "Логика",
+    },
+    aktPas: {
+      type: "А",
+      name: "Актив",
+    },
+    soul: {
+      type: "М",
+      name: "Матер",
+    },
+    electric: {
+      type: "Э",
+      name: "Электр",
+    },
   },
   {
     position: 11,
-    sex: "М",
-    zodiac: "/U+263C",
-    time: "6М",
+    sex: {
+      type: "М",
+      name: "Муж",
+    },
+    zodiac: {
+      type: "&#127779;",
+      name: "Солнце",
+    },
+    time: "6м",
     element: "../img/fire.jpg",
-    logic: "И",
-    aktPas: "А",
-    soul: "М",
-    electric: "Э",
+    logic: {
+      type: "И",
+      name: "Интуиция",
+    },
+    aktPas: {
+      type: "А",
+      name: "Актив",
+    },
+    soul: {
+      type: "М",
+      name: "Матер",
+    },
+    electric: {
+      type: "Э",
+      name: "Электр",
+    },
   },
   {
     position: 12,
-    sex: "Н",
-    zodiac: "/U+2BC9",
-    time: "81Г",
+    sex: {
+      type: "Н",
+      name: "Нейтральный",
+    },
+    zodiac: {
+      type: "&#9798;",
+      name: "Нептун",
+    },
+    time: "81г",
     element: "../img/water.jpg",
-    logic: "И",
-    aktPas: "П",
-    soul: "Д",
-    electric: "М",
+    logic: {
+      type: "И",
+      name: "Интуиция",
+    },
+    aktPas: {
+      type: "П",
+      name: "Пассив",
+    },
+    soul: {
+      type: "Д",
+      name: "Душа",
+    },
+    electric: {
+      type: "М",
+      name: "Магнет",
+    },
   },
   {
     position: 13,
-    sex: "Ж",
-    zodiac: "/U+2BD3",
-    time: "Н",
+    sex: {
+      type: "Ж",
+      name: "Жен",
+    },
+    zodiac: {
+      type: "&#9799;",
+      name: "Плутон",
+    },
+    time: "н",
     element: "../img/fire.jpg",
-    logic: "И",
-    aktPas: "А",
-    soul: "Д",
-    electric: "Э",
+    logic: {
+      type: "И",
+      name: "Интуиция",
+    },
+    aktPas: {
+      type: "А",
+      name: "Актив",
+    },
+    soul: {
+      type: "Д",
+      name: "Душа",
+    },
+    electric: {
+      type: "Э",
+      name: "Электр",
+    },
   },
   {
     position: 14,
-    sex: "Н",
-    zodiac: "/U+264D",
-    time: "44Д",
+    sex: {
+      type: "Н",
+      name: "Нейтральный",
+    },
+    zodiac: {
+      type: "&#9805;",
+      name: "Дева",
+    },
+    time: "44д",
     element: "../img/air.jpg",
-    logic: "Л",
-    aktPas: "П",
-    soul: "Д",
-    electric: "М",
+    logic: {
+      type: "Л",
+      name: "Логика",
+    },
+    aktPas: {
+      type: "П",
+      name: "Пассив",
+    },
+    soul: {
+      type: "Д",
+      name: "Душа",
+    },
+    electric: {
+      type: "М",
+      name: "Магнет",
+    },
   },
   {
     position: 15,
-    sex: "М",
-    zodiac: "/U+2653",
-    time: "Н",
+    sex: {
+      type: "М",
+      name: "Муж",
+    },
+    zodiac: {
+      type: "&#9811;",
+      name: "Рыбы",
+    },
+    time: "н",
     element: "../img/fire.jpg",
-    logic: "И",
-    aktPas: "А",
-    soul: "М",
-    electric: "Э",
+    logic: {
+      type: "И",
+      name: "Интуиция",
+    },
+    aktPas: {
+      type: "А",
+      name: "Акт",
+    },
+    soul: {
+      type: "М",
+      name: "Матер",
+    },
+    electric: {
+      type: "Э",
+      name: "Электр",
+    },
   },
   {
     position: 16,
-    sex: "Н",
-    zodiac: "/U+2650",
-    time: "15Л",
+    sex: {
+      type: "Н",
+      name: "Нейтральный",
+    },
+    zodiac: {
+      type: "&#9808;",
+      name: "Стрелец",
+    },
+    time: "15л",
     element: "../img/earth.jpg",
-    logic: "Л",
-    aktPas: "А",
-    soul: "М",
-    electric: "М",
+    logic: {
+      type: "Л",
+      name: "Логика",
+    },
+    aktPas: {
+      type: "А",
+      name: "Актив",
+    },
+    soul: {
+      type: "М",
+      name: "Матер",
+    },
+    electric: {
+      type: "М",
+      name: "Магнет",
+    },
   },
   {
     position: 17,
-    sex: "Ж",
-    zodiac: "/U+263F",
-    time: "44Д",
+    sex: {
+      type: "Ж",
+      name: "Жен",
+    },
+    zodiac: {
+      type: "&#9791;",
+      name: "Меркурий",
+    },
+    time: "44д",
     element: "../img/water.jpg",
-    logic: "И",
-    aktPas: "А",
-    soul: "Д",
-    electric: "М",
+    logic: {
+      type: "И",
+      name: "Интуиция",
+    },
+    aktPas: {
+      type: "А",
+      name: "Актив",
+    },
+    soul: {
+      type: "Д",
+      name: "Душа",
+    },
+    electric: {
+      type: "М",
+      name: "Магнет",
+    },
   },
   {
     position: 18,
-    sex: "Ж",
-    zodiac: "/U+264B",
-    time: "28Д",
+    sex: {
+      type: "Ж",
+      name: "Жен",
+    },
+    zodiac: {
+      type: "&#9803;",
+      name: "Рак",
+    },
+    time: "28д",
     element: "../img/water.jpg",
-    logic: "И",
-    aktPas: "П",
-    soul: "Д",
-    electric: "М",
+    logic: {
+      type: "И",
+      name: "Интуиция",
+    },
+    aktPas: {
+      type: "П",
+      name: "Пассив",
+    },
+    soul: {
+      type: "Д",
+      name: "Душа",
+    },
+    electric: {
+      type: "М",
+      name: "Магнет",
+    },
   },
   {
     position: 19,
-    sex: "М",
-    zodiac: "/U+264C",
-    time: "1Г",
+    sex: {
+      type: "М",
+      name: "Муж",
+    },
+    zodiac: {
+      type: "&#9804;",
+      name: "Лев",
+    },
+    time: "1г",
     element: "../img/fire.jpg",
-    logic: "Л",
-    aktPas: "А",
-    soul: "М",
-    electric: "Э",
+    logic: {
+      type: "Л",
+      name: "Логика",
+    },
+    aktPas: {
+      type: "А",
+      name: "Актив",
+    },
+    soul: {
+      type: "М",
+      name: "Матер",
+    },
+    electric: {
+      type: "М",
+      name: "Магнет",
+    },
   },
   {
     position: 20,
-    sex: "Н",
-    zodiac: "/U+2643",
-    time: "6Л",
+    sex: {
+      type: "Н",
+      name: "Нейтральный",
+    },
+    zodiac: {
+      type: "&#9795;",
+      name: "Юпитер",
+    },
+    time: "6л",
     element: "../img/earth.jpg",
-    logic: "Л",
-    aktPas: "П",
-    soul: "Д",
-    electric: "М",
+    logic: {
+      type: "Л",
+      name: "Логика",
+    },
+    aktPas: {
+      type: "П",
+      name: "Пассив",
+    },
+    soul: {
+      type: "Д",
+      name: "Душа",
+    },
+    electric: {
+      type: "М",
+      name: "Магнет",
+    },
   },
   {
     position: 21,
-    sex: "Н",
-    zodiac: "/U+2652",
-    time: "42Г",
+    sex: {
+      type: "Н",
+      name: "Нейтральный",
+    },
+    zodiac: {
+      type: "&#9810;",
+      name: "Водолей",
+    },
+    time: "42г",
     element: "../img/air.jpg",
-    logic: "И",
-    aktPas: "А",
-    soul: "М",
-    electric: "Э",
+    logic: {
+      type: "И",
+      name: "Интуиция",
+    },
+    aktPas: {
+      type: "А",
+      name: "Актив",
+    },
+    soul: {
+      type: "М",
+      name: "Матер",
+    },
+    electric: {
+      type: "Э",
+      name: "Электр",
+    },
   },
   {
     position: 22,
-    sex: "Н",
-    zodiac: "/U+2648",
-    time: "1М",
+    sex: {
+      type: "Н",
+      name: "Нейтральный",
+    },
+    zodiac: {
+      type: "&#9800;",
+      name: "Овен",
+    },
+    time: "1м",
     element: "../img/fire.jpg",
-    logic: "И",
-    aktPas: "А",
-    soul: "М",
-    electric: "Э",
+    logic: {
+      type: "И",
+      name: "Интуиция",
+    },
+    aktPas: {
+      type: "А",
+      name: "Актив",
+    },
+    soul: {
+      type: "М",
+      name: "Матер",
+    },
+    electric: {
+      type: "Э",
+      name: "Электр",
+    },
   },
 ];
 
@@ -473,20 +854,19 @@ function getFormValue(event) {
   function addToTaroTable(taro, positionTaro) {
     taro.children[0].innerHTML = filtrTaroTable(positionTaro)[0].sex.type;
     taro.children[0].title = filtrTaroTable(positionTaro)[0].sex.name;
-    taro.children[1].innerHTML = filtrTaroTable(positionTaro)[0].zodiac;
-    taro.children[1].title = filtrTaroTable(positionTaro)[0].zodiac;
+    taro.children[1].innerHTML = filtrTaroTable(positionTaro)[0].zodiac.type;
+    taro.children[1].title = filtrTaroTable(positionTaro)[0].zodiac.name;
     taro.children[2].children[0].src = filtrTaroTable(positionTaro)[0].element;
     taro.children[3].innerHTML = filtrTaroTable(positionTaro)[0].time;
-    taro.children[4].innerHTML = "Т";
-    taro.children[4].title = filtrTaroTable(positionTaro)[0].time;
-    taro.children[5].innerHTML = filtrTaroTable(positionTaro)[0].logic.type;
-    taro.children[5].title = filtrTaroTable(positionTaro)[0].logic.name;
-    taro.children[6].innerHTML = filtrTaroTable(positionTaro)[0].aktPas.type;
-    taro.children[6].title = filtrTaroTable(positionTaro)[0].aktPas.name;
-    taro.children[7].innerHTML = filtrTaroTable(positionTaro)[0].soul.type;
-    taro.children[7].title = filtrTaroTable(positionTaro)[0].soul.name;
-    taro.children[8].innerHTML = filtrTaroTable(positionTaro)[0].electric.type;
-    taro.children[8].title = filtrTaroTable(positionTaro)[0].electric.name;
+    taro.children[3].title = filtrTaroTable(positionTaro)[0].time;
+    taro.children[4].innerHTML = filtrTaroTable(positionTaro)[0].logic.type;
+    taro.children[4].title = filtrTaroTable(positionTaro)[0].logic.name;
+    taro.children[5].innerHTML = filtrTaroTable(positionTaro)[0].aktPas.type;
+    taro.children[5].title = filtrTaroTable(positionTaro)[0].aktPas.name;
+    taro.children[6].innerHTML = filtrTaroTable(positionTaro)[0].soul.type;
+    taro.children[6].title = filtrTaroTable(positionTaro)[0].soul.name;
+    taro.children[7].innerHTML = filtrTaroTable(positionTaro)[0].electric.type;
+    taro.children[7].title = filtrTaroTable(positionTaro)[0].electric.name;
   }
 
   addToTaroTable(taroArr1, result.p1);
