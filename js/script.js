@@ -471,7 +471,6 @@ function getFormValue(event) {
   }
 
   function addToTaroTable(taro, positionTaro) {
-    console.log("taro", taro);
     taro.children[0].innerHTML = filtrTaroTable(positionTaro)[0].sex.type;
     taro.children[0].title = filtrTaroTable(positionTaro)[0].sex.name;
     taro.children[1].innerHTML = filtrTaroTable(positionTaro)[0].zodiac;
