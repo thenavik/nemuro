@@ -7,21 +7,10 @@ section {
   color: rgb(36, 36, 36);
 }
 
-.plus {
-  width: 10vw;
-  height: 30vw;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.result {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 span.result-symbol {
   font-size: 50px;
   font-weight: 700;
+  display: flex;
+  justify-content: center;
+  color: rgb(36, 36, 36);
 }
