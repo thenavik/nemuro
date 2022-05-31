@@ -92,6 +92,9 @@ div.topBotomBordersOut a:hover:after {
   opacity: 1;
   transform: translateY(0px);
 }
+header a:focus {
+  color: #fff;
+}
 
 /* ---------------Header customization--------------- */
 
