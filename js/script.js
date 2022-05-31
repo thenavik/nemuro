@@ -51,6 +51,11 @@ const grayAnswer21 = document.querySelector("#grayAnswer21");
 
 // taro
 const taroArr1 = document.querySelector("#taroArr1");
+const taroArr2 = document.querySelector("#taroArr2");
+const taroArr3 = document.querySelector("#taroArr3");
+const taroArr4 = document.querySelector("#taroArr4");
+const taroArr5 = document.querySelector("#taroArr5");
+const taroArr6 = document.querySelector("#taroArr6");
 
 // console.log("ff", taroArr1.children[3]);
 //Полyчаем sub
@@ -467,13 +472,33 @@ function getFormValue(event) {
   function filtrTaroTable(number) {
     return taroTable.filter((el) => el.position == number);
   }
-  // console.log("ff", filtrTaroTable(result.p1)[0].sex);
-  taroArr1.children[0].innerHTML = filtrTaroTable(result.p1)[0].sex;
-  taroArr1.children[2].children[0].src = filtrTaroTable(result.p1)[0].element;
-  taroArr1.children[3].innerHTML = filtrTaroTable(result.p1)[0].sex;
-  // taroArr1.children[2].innerHTML = filtrTaroTable(result.p1)[0].sex;
-  // taroArr1.children[3].innerHTML = filtrTaroTable(result.p1)[0].sex;
-  // taroArr1.children[4].innerHTML = filtrTaroTable(result.p1)[0].sex;
+
+  function addToTaroTable(taro, positionTaro) {
+    console.log("taro", taro);
+    taro.children[0].innerHTML = filtrTaroTable(positionTaro)[0].sex.type;
+    taro.children[0].title = filtrTaroTable(positionTaro)[0].sex.name;
+    taro.children[1].innerHTML = filtrTaroTable(positionTaro)[0].zodiac;
+    taro.children[1].title = filtrTaroTable(positionTaro)[0].zodiac;
+    taro.children[2].children[0].src = filtrTaroTable(positionTaro)[0].element;
+    taro.children[3].innerHTML = filtrTaroTable(positionTaro)[0].time;
+    taro.children[4].innerHTML = "Т";
+    taro.children[4].title = filtrTaroTable(positionTaro)[0].time;
+    taro.children[5].innerHTML = filtrTaroTable(positionTaro)[0].logic.type;
+    taro.children[5].title = filtrTaroTable(positionTaro)[0].logic.name;
+    taro.children[6].innerHTML = filtrTaroTable(positionTaro)[0].aktPas.type;
+    taro.children[6].title = filtrTaroTable(positionTaro)[0].aktPas.name;
+    taro.children[7].innerHTML = filtrTaroTable(positionTaro)[0].soul.type;
+    taro.children[7].title = filtrTaroTable(positionTaro)[0].soul.name;
+    taro.children[8].innerHTML = filtrTaroTable(positionTaro)[0].electric.type;
+    taro.children[8].title = filtrTaroTable(positionTaro)[0].electric.name;
+  }
+
+  addToTaroTable(taroArr1, result.p1);
+  addToTaroTable(taroArr2, result.p2);
+  addToTaroTable(taroArr3, result.p3);
+  addToTaroTable(taroArr4, result.p4);
+  addToTaroTable(taroArr5, result.p5);
+  addToTaroTable(taroArr6, result.p6);
 }
 
 function resultPsiPotret(data) {
