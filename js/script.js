@@ -61,14 +61,29 @@ const date = document.querySelector("#date");
 const taroTable = [
   {
     position: 1,
-    sex: "М",
+    sex: {
+      type: "М",
+      name: "Муж",
+    },
     zodiac: "/U+264A",
     time: "44Д",
     element: "../img/air.jpg",
-    logic: "Л",
-    aktPas: "А",
-    soul: "Д",
-    electric: "Э",
+    logic: {
+      type: "Л",
+      name: "Логика",
+    },
+    aktPas: {
+      type: "А",
+      name: "Актив",
+    },
+    soul: {
+      type: "Д",
+      name: "Душа",
+    },
+    electric: {
+      type: "Э",
+      name: "Электр",
+    },
   },
   {
     position: 2,
