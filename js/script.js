@@ -87,7 +87,10 @@ const taroTable = [
   },
   {
     position: 2,
-    sex: "Ж",
+    sex: {
+      type: "Ж",
+      name: "Жен",
+    },
     zodiac: "/263D",
     time: "14Д",
     element: "../img/water.jpg",
