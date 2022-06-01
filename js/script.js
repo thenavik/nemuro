@@ -732,9 +732,11 @@ const taroTable = [
   },
 ];
 
+getFormValue();
+
 form.addEventListener("submit", getFormValue);
 function getFormValue(event) {
-  event.preventDefault();
+  // event.preventDefault();
   table.classList.remove("none");
   tableMiddle.classList.remove("none");
   let day = form.querySelector('[name="day"]');
