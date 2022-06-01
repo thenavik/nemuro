@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Психологические портреты</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/fourdayscompozit.css" />
+    <style>
+      .tbl {
+        border: 1px solid rgb(36, 36, 36);
+      }
+      .tbh {
+        border: 1px solid #3366ff;
+        background-color: #99ccff;
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 5px;
+      }
+      .nil {
+        border: 1px solid #ffffff;
+        background-color: #ffffff;
+      }
+      .ind {
+        font-size: 24px;
+        font-weight: bold;
+        color: rgb(36, 36, 36);
+      }
+      .ind_s {
+        font-size: 16px;
+        font-weight: bold;
+        color: rgb(36, 36, 36);
+      }
+      .sub {
+        font-size: 12px;
+        color: #999999;
+      }
+      .sub_s {
+        font-size: 10px;
+        color: #999999;
+      }
+      .inda {
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(36, 36, 36);
+      }
+      .gray {
+        color: #999999;
+      }
+      .eso ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+      }
+      .eso ul li {
+        float: left;
+        padding: 1px;
+        font-size: 12px;
+      }
+      .anons {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-container blue topBotomBordersOut">
+        <a id="logo" target="_blank" href="https://likarudneva.com/">Главная</a>
+        <ul>
+          <li><a href="">Основная</a></li>
+          <li>
+            <a href="./index.html">Личностный портрет</a>
+          </li>
+          <li>
+            <a href="./dayscompozit.html">Совместимость</a>
+          </li>
+          <li>
+            <a href="./calendar.html">Прогноз</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="main-section">
+      <div class="main-content">
+        <h2>Введите дату рождения</h2>
+        <form id="form" action="">
+          <h2 class="subtitle">Первая дата:</h2>
+          <input
+            name="day"
+            id="day2"
+            type="text"
+            maxlength="2"
+            placeholder="01"
+            required
+          />
+          <input
+            name="month"
+            id="month2"
+            type="text"
+            maxlength="2"
+            placeholder="01"
+            required
+          />
+          <input
+            name="year"
+            id="year2"
+            type="text"
+            maxlength="4"
+            placeholder="1999"
+            required
+          />,
+
+          <h2 class="subtitle">Вторая дата:</h2>
+          <input
+            name="day"
+            id="day1"
+            type="text"
+            maxlength="2"
+            placeholder="01"
+            required
+          />
+          <input
+            name="month"
+            id="month1"
+            type="text"
+            maxlength="2"
+            placeholder="01"
+            required
+          />
+          <input
+            name="year"
+            id="year1"
+            type="text"
+            maxlength="4"
+            placeholder="1999"
+            required
+          />
+
+          <h2 class="subtitle">Третья дата:</h2>
+          <input
+            name="day"
+            id="day1"
+            type="text"
+            maxlength="2"
+            placeholder="01"
+            required
+          />
+          <input
+            name="month"
+            id="month1"
+            type="text"
+            maxlength="2"
+            placeholder="01"
+            required
+          />
+          <input
+            name="year"
+            id="year1"
+            type="text"
+            maxlength="4"
+            placeholder="1999"
+            required
+          />
+          <!-- // -->
+          <button class="btn" id="count-btn">Посчитать</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

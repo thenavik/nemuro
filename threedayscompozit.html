@@ -97,10 +97,40 @@
           <h2 class="subtitle">Первая дата:</h2>
           <input
             name="day"
+            id="day1"
+            type="text"
+            maxlength="2"
+            placeholder="1"
+            value="1"
+            required
+          />
+          <input
+            name="month"
+            id="month1"
+            type="text"
+            maxlength="2"
+            placeholder="1"
+            value="1"
+            required
+          />
+          <input
+            name="year"
+            id="year1"
+            type="text"
+            maxlength="4"
+            placeholder="2022"
+            value="2022"
+            required
+          />,
+
+          <h2 class="subtitle">Вторая дата:</h2>
+          <input
+            name="day"
             id="day2"
             type="text"
             maxlength="2"
-            placeholder="01"
+            placeholder="1"
+            value="1"
             required
           />
           <input
@@ -108,7 +138,8 @@
             id="month2"
             type="text"
             maxlength="2"
-            placeholder="01"
+            placeholder="1"
+            value="1"
             required
           />
           <input
@@ -116,59 +147,37 @@
             id="year2"
             type="text"
             maxlength="4"
-            placeholder="1999"
-            required
-          />,
-
-          <h2 class="subtitle">Вторая дата:</h2>
-          <input
-            name="day"
-            id="day1"
-            type="text"
-            maxlength="2"
-            placeholder="01"
-            required
-          />
-          <input
-            name="month"
-            id="month1"
-            type="text"
-            maxlength="2"
-            placeholder="01"
-            required
-          />
-          <input
-            name="year"
-            id="year1"
-            type="text"
-            maxlength="4"
-            placeholder="1999"
+            placeholder="2022"
+            value="2022"
             required
           />
 
           <h2 class="subtitle">Третья дата:</h2>
           <input
             name="day"
-            id="day1"
+            id="day3"
             type="text"
             maxlength="2"
-            placeholder="01"
+            placeholder="1"
+            value="1"
             required
           />
           <input
             name="month"
-            id="month1"
+            id="month3"
             type="text"
             maxlength="2"
-            placeholder="01"
+            placeholder="1"
+            value="1"
             required
           />
           <input
             name="year"
-            id="year1"
+            id="year3"
             type="text"
             maxlength="4"
-            placeholder="1999"
+            placeholder="2022"
+            value="2022"
             required
           />
           <!-- // -->
@@ -181,7 +190,7 @@
       <table width="70%" border="0" align="center">
         <tbody>
           <tr>
-            <td width="25%" align="left" valign="middle">
+            <td width="25%" align="left" valign="middle" id="left-table">
               <table border="0" align="center">
                 <tbody>
                   <tr>
@@ -195,7 +204,7 @@
                           </tr>
                           <tr>
                             <td align="center" valign="middle">
-                              <span class="ind_s">VII</span>
+                              <span class="ind_s" id="position13">VII</span>
                             </td>
                           </tr>
                           <tr>
@@ -221,7 +230,7 @@
                           </tr>
                           <tr>
                             <td align="center" valign="middle">
-                              <span class="ind_s">VII</span>
+                              <span class="ind_s" id="position14">VII</span>
                             </td>
                           </tr>
                           <tr>
@@ -234,8 +243,14 @@
                     </td>
                   </tr>
                   <tr>
-                    <td align="center" valign="middle" colspan="7" class="tbh">
-                      01.01.1
+                    <td
+                      align="center"
+                      valign="middle"
+                      colspan="7"
+                      class="tbh"
+                      id="left-table-date"
+                    >
+                      01.01.1999
                     </td>
                   </tr>
                   <tr>
@@ -249,7 +264,7 @@
                           </tr>
                           <tr>
                             <td align="center" valign="middle">
-                              <span class="ind_s">VIII</span>
+                              <span class="ind_s" id="position12">VIII</span>
                             </td>
                           </tr>
                           <tr>
@@ -270,7 +285,7 @@
                           </tr>
                           <tr>
                             <td align="center" valign="middle">
-                              <span class="ind_s">I</span>
+                              <span class="ind_s" id="position1">I</span>
                             </td>
                           </tr>
                           <tr>
@@ -292,7 +307,7 @@
                           </tr>
                           <tr>
                             <td align="center" valign="middle">
-                              <span class="ind_s">I</span>
+                              <span class="ind_s" id="position2">I</span>
                             </td>
                           </tr>
                           <tr>
@@ -314,7 +329,7 @@
                           </tr>
                           <tr>
                             <td align="center" valign="middle">
-                              <span class="ind_s">I</span>
+                              <span class="ind_s" id="position3">I</span>
                             </td>
                           </tr>
                           <tr>
@@ -335,7 +350,7 @@
                           </tr>
                           <tr>
                             <td align="center" valign="middle">
-                              <span class="ind_s">III</span>
+                              <span class="ind_s" id="position7">III</span>
                             </td>
                           </tr>
                           <tr>
@@ -360,7 +375,7 @@
                           </tr>
                           <tr>
                             <td align="center" valign="middle">
-                              <span class="ind_s">II</span>
+                              <span class="ind_s" id="position4">II</span>
                             </td>
                           </tr>
                           <tr>
@@ -382,7 +397,7 @@
                           </tr>
                           <tr>
                             <td align="center" valign="middle">
-                              <span class="ind_s">II</span>
+                              <span class="ind_s" id="position5">II</span>
                             </td>
                           </tr>
                           <tr>
@@ -410,7 +425,7 @@
                           </tr>
                           <tr>
                             <td align="center" valign="middle">
-                              <span class="ind_s">IV</span>
+                              <span class="ind_s" id="position6">IV</span>
                             </td>
                           </tr>
                           <tr>
@@ -439,7 +454,7 @@
                           </tr>
                           <tr>
                             <td align="center" valign="middle">
-                              <span class="ind_s">V</span>
+                              <span class="ind_s" id="position8">V</span>
                             </td>
                           </tr>
                           <tr>
@@ -460,7 +475,7 @@
             <td width="5%" align="center" valign="middle">
               <font size="7">+</font>
             </td>
-            <td width="25%" align="right" valign="middle">
+            <td width="25%" align="right" valign="middle" id="right-table">
               <table border="0" align="center">
                 <tbody>
                   <tr>
@@ -513,7 +528,13 @@
                     </td>
                   </tr>
                   <tr>
-                    <td align="center" valign="middle" colspan="7" class="tbh">
+                    <td
+                      align="center"
+                      valign="middle"
+                      colspan="7"
+                      class="tbh"
+                      id="right-table-date"
+                    >
                       01.01.1
                     </td>
                   </tr>
@@ -739,7 +760,7 @@
             <td width="5%" align="center" valign="middle">
               <font size="7">+</font>
             </td>
-            <td width="25%" align="right" valign="middle">
+            <td width="25%" align="right" valign="middle" id="center-table">
               <table border="0" align="center">
                 <tbody>
                   <tr>
@@ -792,7 +813,13 @@
                     </td>
                   </tr>
                   <tr>
-                    <td align="center" valign="middle" colspan="7" class="tbh">
+                    <td
+                      align="center"
+                      valign="middle"
+                      colspan="7"
+                      class="tbh"
+                      id="center-table-date"
+                    >
                       01.01.1
                     </td>
                   </tr>
@@ -1296,5 +1323,7 @@
         на номер <span>+7 (911) 830-83-94</span>
       </p>
     </footer>
+
+    <script src="js/threedayscompozit.js"></script>
   </body>
 </html>
