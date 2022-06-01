@@ -14,3 +14,38 @@ span.result-symbol {
   justify-content: center;
   color: rgb(36, 36, 36);
 }
+
+/*DROPDOWN MENU COMPOZIT DAYS*/
+.compozit-drop {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.compozit-drop ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  width: 30%;
+  color: rgb(36, 36, 36);
+  box-shadow: none !important;
+}
+.compozit-drop ul li {
+  list-style: none;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid #4285c7;
+  margin: 5px 5px;
+}
+.compozit-drop ul li a {
+  text-decoration: none;
+  color: rgb(36, 36, 36);
+}
+
+.compozit-drop ul li:hover {
+  background-color: #99ccff;
+}
+
+.compozit-drop ul li:focus {
+  background-color: #99ccff;
+}
