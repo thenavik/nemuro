@@ -1,0 +1,9 @@
+.form-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form__group:nth-child(4) {
+  padding: 0 0 20px 0;
+}

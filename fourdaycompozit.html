@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/calendar.css" />
     <link rel="stylesheet" href="css/threedayscompozit.css" />
+    <link rel="stylesheet" href="css/fourdayscompozit.css" />
     <style>
       .tbl {
         border: 1px solid rgb(36, 36, 36);
@@ -97,104 +98,139 @@
     <div class="main-section">
       <div class="main-content">
         <h2>Введите дату рождения</h2>
-        <form id="form" action="">
-          <h2 class="subtitle">Первая дата:</h2>
-          <input
-            name="day"
-            id="day1"
-            type="text"
-            maxlength="2"
-            placeholder="1"
-            value="1"
-            required
-          />
-          <input
-            name="month"
-            id="month1"
-            type="text"
-            maxlength="2"
-            placeholder="1"
-            value="1"
-            required
-          />
-          <input
-            name="year"
-            id="year1"
-            type="text"
-            maxlength="4"
-            placeholder="2022"
-            value="2022"
-            required
-          />,
+        <form id="form" action="" class="form-box">
+          <div class="form__group">
+            <h2 class="subtitle">Первая дата:</h2>
+            <input
+              name="day"
+              id="day1"
+              type="text"
+              maxlength="2"
+              placeholder="1"
+              value="1"
+              required
+            />
+            <input
+              name="month"
+              id="month1"
+              type="text"
+              maxlength="2"
+              placeholder="1"
+              value="1"
+              required
+            />
+            <input
+              name="year"
+              id="year1"
+              type="text"
+              maxlength="4"
+              placeholder="2022"
+              value="2022"
+              required
+            />,
+          </div>
 
-          <h2 class="subtitle">Вторая дата:</h2>
-          <input
-            name="day"
-            id="day2"
-            type="text"
-            maxlength="2"
-            placeholder="1"
-            value="1"
-            required
-          />
-          <input
-            name="month"
-            id="month2"
-            type="text"
-            maxlength="2"
-            placeholder="1"
-            value="1"
-            required
-          />
-          <input
-            name="year"
-            id="year2"
-            type="text"
-            maxlength="4"
-            placeholder="2022"
-            value="2022"
-            required
-          />
+          <div class="form__group">
+            <h2 class="subtitle">Вторая дата:</h2>
+            <input
+              name="day"
+              id="day2"
+              type="text"
+              maxlength="2"
+              placeholder="1"
+              value="1"
+              required
+            />
+            <input
+              name="month"
+              id="month2"
+              type="text"
+              maxlength="2"
+              placeholder="1"
+              value="1"
+              required
+            />
+            <input
+              name="year"
+              id="year2"
+              type="text"
+              maxlength="4"
+              placeholder="2022"
+              value="2022"
+              required
+            />,
+          </div>
 
-          <h2 class="subtitle">Третья дата:</h2>
-          <input
-            name="day"
-            id="day3"
-            type="text"
-            maxlength="2"
-            placeholder="1"
-            value="1"
-            required
-          />
-          <input
-            name="month"
-            id="month3"
-            type="text"
-            maxlength="2"
-            placeholder="1"
-            value="1"
-            required
-          />
-          <input
-            name="year"
-            id="year3"
-            type="text"
-            maxlength="4"
-            placeholder="2022"
-            value="2022"
-            required
-          />
-          <!-- // -->
+          <div class="form__group">
+            <h2 class="subtitle">Третья дата:</h2>
+            <input
+              name="day"
+              id="day3"
+              type="text"
+              maxlength="2"
+              placeholder="1"
+              value="1"
+              required
+            />
+            <input
+              name="month"
+              id="month3"
+              type="text"
+              maxlength="2"
+              placeholder="1"
+              value="1"
+              required
+            />
+            <input
+              name="year"
+              id="year3"
+              type="text"
+              maxlength="4"
+              placeholder="2022"
+              value="2022"
+              required
+            />,
+          </div>
+          <div class="form__group">
+            <h2 class="subtitle">Четвертый дата:</h2>
+            <input
+              name="day"
+              id="day4"
+              type="text"
+              maxlength="2"
+              placeholder="1"
+              value="1"
+              required
+            />
+            <input
+              name="month"
+              id="month4"
+              type="text"
+              maxlength="2"
+              placeholder="1"
+              value="1"
+              required
+            />
+            <input
+              name="year"
+              id="year4"
+              type="text"
+              maxlength="4"
+              placeholder="2022"
+              value="2022"
+              required
+            />
+          </div>
           <button class="btn" id="count-btn">Посчитать</button>
         </form>
       </div>
     </div>
 
-    <section class="dates-table">
-      <table width="70%" border="0" align="center">
+    <section class="dates-table container">
+      <table width="100%" border="0" align="center">
         <tbody>
           <tr>
-            <td width="25%" align="left" valign="middle" id="left-table">
+            <td width="21%" align="left" valign="middle" id="left-table">
               <table border="0" align="center">
                 <tbody>
                   <tr>
@@ -485,7 +521,7 @@
             <td width="5%" align="center" valign="middle">
               <font size="7">+</font>
             </td>
-            <td width="25%" align="right" valign="middle" id="right-table">
+            <td width="23%" align="right" valign="middle" id="right-table">
               <table border="0" align="center">
                 <tbody>
                   <tr>
@@ -784,7 +820,7 @@
             <td width="5%" align="center" valign="middle">
               <font size="7">+</font>
             </td>
-            <td width="25%" align="right" valign="middle" id="center-table">
+            <td width="21%" align="right" valign="middle" id="center-table">
               <table border="0" align="center">
                 <tbody>
                   <tr>
@@ -1057,6 +1093,294 @@
                           <tr>
                             <td align="center" valign="middle">
                               <span class="ind_s" id="right-position8">V</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s">I + IV</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%">&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+            <!-- fuck -->
+            <td width="5%" align="center" valign="middle">
+              <font size="7">+</font>
+            </td>
+            <td width="22%" align="right" valign="middle" id="center-table">
+              <table border="0" align="center">
+                <tbody>
+                  <tr>
+                    <td width="14%" align="center" valign="middle">
+                      <table border="0">
+                        <tbody>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s">13 jovid</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="ind_s" id="for-position13">VII</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s">I + II + IV</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%" align="center" valign="middle">
+                      <table border="0">
+                        <tbody>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s">14</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="ind_s" id="for-position14">VII</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s">I + II + IV</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      align="center"
+                      valign="middle"
+                      colspan="7"
+                      class="tbh"
+                      id="four-table-date"
+                    >
+                      01.01.2022
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="14%" align="center" valign="middle">
+                      <table border="0">
+                        <tbody>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s">12</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="ind_s" id="for-position12"
+                                >VIII</span
+                              >
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s">III + V</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                    <td width="14%" align="center" valign="middle">
+                      <table border="0">
+                        <tbody>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s">1</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="ind_s" id="for-position1">I</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s"> </span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%" align="center" valign="middle">
+                      <table border="0">
+                        <tbody>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s">2</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="ind_s" id="for-position2">I</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s"></span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%" align="center" valign="middle">
+                      <table border="0">
+                        <tbody>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s">3</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="ind_s" id="for-position3">I</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s"></span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                    <td width="14%" align="center" valign="middle">
+                      <table border="0">
+                        <tbody>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s">7</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="ind_s" id="for-position7">III</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s">II + I</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%" align="center" valign="middle">
+                      <table border="0">
+                        <tbody>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s">4</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="ind_s" id="for-position4">II</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s">I + I</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%" align="center" valign="middle">
+                      <table border="0">
+                        <tbody>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s">5</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="ind_s" id="for-position5">II</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s">I + I</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%" align="center" valign="middle">
+                      <table border="0">
+                        <tbody>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s">6</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="ind_s" id="for-position6">IV</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s">II + II</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%">&nbsp;</td>
+                    <td width="14%" align="center" valign="middle">
+                      <table border="0">
+                        <tbody>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="sub_s">8</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle">
+                              <span class="ind_s" id="for-position8">V</span>
                             </td>
                           </tr>
                           <tr>
@@ -1356,6 +1680,6 @@
       </p>
     </footer>
 
-    <script src="js/threedayscompozit.js"></script>
+    <script src="js/fourdaycompozit.js"></script>
   </body>
 </html>

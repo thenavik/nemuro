@@ -29,7 +29,6 @@ function generateCalendarData(elem, year, month) {
   let mon = month - 1;
   let d = new Date(year, mon);
   const birthdayPosition = getBirthdayPositions();
-  console.log("fdf", birthdayPosition);
 
   let table = `<table width="100%" border="0">
   <tbody>

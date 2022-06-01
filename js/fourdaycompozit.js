@@ -7,6 +7,7 @@ const centerTable = document.querySelector("#center-table");
 const leftTableDate = document.querySelector("#left-table-date");
 const centerTableDate = document.querySelector("#right-table-date");
 const rightTableDate = document.querySelector("#center-table-date");
+const fourTableDate = document.querySelector("#four-table-date");
 const bottomTableDate = document.querySelector("#bottom-table-date");
 //POSITIONS from LEft table
 const leftPosition1 = document.querySelector("#left-position1");
@@ -44,6 +45,18 @@ const rightPosition8 = document.querySelector("#right-position8");
 const rightPosition12 = document.querySelector("#right-position12");
 const rightPosition13 = document.querySelector("#right-position13");
 const rightPosition14 = document.querySelector("#right-position14");
+//POSITIONS from four table
+const fourPosition1 = document.querySelector("#for-position1");
+const fourPosition2 = document.querySelector("#for-position2");
+const fourPosition3 = document.querySelector("#for-position3");
+const fourPosition4 = document.querySelector("#for-position4");
+const fourPosition5 = document.querySelector("#for-position5");
+const fourPosition6 = document.querySelector("#for-position6");
+const fourPosition7 = document.querySelector("#for-position7");
+const fourPosition8 = document.querySelector("#for-position8");
+const fourPosition12 = document.querySelector("#for-position12");
+const fourPosition13 = document.querySelector("#for-position13");
+const fourPosition14 = document.querySelector("#for-position14");
 //POSITIONS from BOTTOM (result sum of 3 top tables all) table
 const resultSumAll1 = document.querySelector("#sum-all-result1");
 const resultSumAll2 = document.querySelector("#sum-all-result2");
@@ -72,6 +85,10 @@ function getFormValue(event) {
   const day3 = form.querySelector('[id="day3"]');
   const month3 = form.querySelector('[id="month3"]');
   const year3 = form.querySelector('[id="year3"]');
+  //Input 4 value
+  const day4 = form.querySelector('[id="day4"]');
+  const month4 = form.querySelector('[id="month4"]');
+  const year4 = form.querySelector('[id="year4"]');
 
   const dataLeft = {
     day: day1.value,
@@ -88,19 +105,27 @@ function getFormValue(event) {
     month: month3.value,
     year: year3.value,
   };
+  const dataFour = {
+    day: day4.value,
+    month: month4.value,
+    year: year4.value,
+  };
   //Writing to document the date
   leftTableDate.innerHTML = `${dataLeft.day}.${dataLeft.month}.${dataLeft.year}`;
   rightTableDate.innerHTML = `${dataRight.day}.${dataRight.month}.${dataRight.year} `;
   centerTableDate.innerHTML = `${dataCenter.day}.${dataCenter.month}.${dataCenter.year}`;
-  bottomTableDate.innerHTML = `${dataLeft.day}.${dataLeft.month}.${dataLeft.year} и ${dataCenter.day}.${dataCenter.month}.${dataCenter.year} и ${dataRight.day}.${dataRight.month}.${dataRight.year}`;
+  fourTableDate.innerHTML = `${dataFour.day}.${dataFour.month}.${dataFour.year}`;
+  bottomTableDate.innerHTML = `${dataLeft.day}.${dataLeft.month}.${dataLeft.year} и ${dataCenter.day}.${dataCenter.month}.${dataCenter.year} и ${dataRight.day}.${dataRight.month}.${dataRight.year} и ${dataFour.day}.${dataFour.month}.${dataFour.year}`;
   //Result of LEFT TABLE
   const resultLeft = resultPsiPotret(dataLeft);
   const resultCenter = resultPsiPotret(dataCenter);
   const resultRight = resultPsiPotret(dataRight);
+  const resultFour = resultPsiPotret(dataFour);
   const resultSumAll = resultPsiPotretAll(
     resultLeft,
     resultCenter,
-    resultRight
+    resultRight,
+    resultFour
   );
   //romanizing & Writing to document LEFT TABLE
   leftPosition1.innerHTML = romanize(resultLeft.p1);
@@ -138,6 +163,18 @@ function getFormValue(event) {
   rightPosition12.innerHTML = romanize(resultRight.p12);
   rightPosition13.innerHTML = romanize(resultRight.p13);
   rightPosition14.innerHTML = romanize(resultRight.p14);
+  //romanizing & Writing to document Four TABLE
+  fourPosition1.innerHTML = romanize(resultFour.p1);
+  fourPosition2.innerHTML = romanize(resultFour.p2);
+  fourPosition3.innerHTML = romanize(resultFour.p3);
+  fourPosition4.innerHTML = romanize(resultFour.p4);
+  fourPosition5.innerHTML = romanize(resultFour.p5);
+  fourPosition6.innerHTML = romanize(resultFour.p6);
+  fourPosition7.innerHTML = romanize(resultFour.p7);
+  fourPosition8.innerHTML = romanize(resultFour.p8);
+  fourPosition12.innerHTML = romanize(resultFour.p12);
+  fourPosition13.innerHTML = romanize(resultFour.p13);
+  fourPosition14.innerHTML = romanize(resultFour.p14);
   //romanizing & Writing to document BOTTOM (sum of 3 top tables) TABLE
   resultSumAll1.innerHTML = resultSumAll.p1;
   resultSumAll2.innerHTML = resultSumAll.p2;
@@ -190,8 +227,8 @@ function resultPsiPotret(data) {
   };
 }
 
-function summThreePosition(pos1, pos2, pos3) {
-  let res = Number(pos1) + Number(pos2) + Number(pos3);
+function summFourPosition(pos1, pos2, pos3, pos4) {
+  let res = Number(pos1) + Number(pos2) + Number(pos3) + Number(pos4);
 
   while (res > 22) {
     res -= 22;
@@ -202,17 +239,17 @@ function summThreePosition(pos1, pos2, pos3) {
   return res;
 }
 
-function resultPsiPotretAll(left, center, right) {
-  let p1 = summThreePosition(left.p1, center.p1, right.p1);
-  let p2 = summThreePosition(left.p2, center.p2, right.p2);
-  let p3 = summThreePosition(left.p3, center.p3, right.p3);
-  let p4 = summThreePosition(left.p4, center.p4, right.p4);
-  let p5 = summThreePosition(left.p5, center.p5, right.p5);
-  let p6 = summThreePosition(left.p6, center.p6, right.p6);
-  let p7 = summThreePosition(left.p7, center.p7, right.p7);
-  let p8 = summThreePosition(left.p8, center.p8, right.p8);
-  let p13 = summThreePosition(left.p13, center.p13, right.p13);
-  let p14 = summThreePosition(left.p14, center.p14, right.p14);
+function resultPsiPotretAll(left, center, right, four) {
+  let p1 = summFourPosition(left.p1, center.p1, right.p1, four.p1);
+  let p2 = summFourPosition(left.p2, center.p2, right.p2, four.p2);
+  let p3 = summFourPosition(left.p3, center.p3, right.p3, four.p3);
+  let p4 = summFourPosition(left.p4, center.p4, right.p4, four.p4);
+  let p5 = summFourPosition(left.p5, center.p5, right.p5, four.p5);
+  let p6 = summFourPosition(left.p6, center.p6, right.p6, four.p6);
+  let p7 = summFourPosition(left.p7, center.p7, right.p7, four.p7);
+  let p8 = summFourPosition(left.p8, center.p8, right.p8, four.p8);
+  let p13 = summFourPosition(left.p13, center.p13, right.p13, four.p13);
+  let p14 = summFourPosition(left.p14, center.p14, right.p14, four.p14);
 
   return {
     p1: romanize(p1),
