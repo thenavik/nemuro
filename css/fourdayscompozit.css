@@ -7,3 +7,11 @@
 .form__group:nth-child(4) {
   padding: 0 0 20px 0;
 }
+
+.form__group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
