@@ -255,7 +255,6 @@ function sumYear(year) {
 }
 
 function resultPsiPotretAll(left, right) {
-  console.log(left, right);
   const p1 =
     left.p1 + right.p1 > 22 ? left.p1 + right.p1 - 22 : left.p1 + right.p1;
   const p2 =

@@ -102,24 +102,27 @@
             id="day2"
             type="text"
             maxlength="2"
-            placeholder="01"
+            placeholder="1"
             required
+            value="1"
           />
           <input
             name="month"
             id="month2"
             type="text"
             maxlength="2"
-            placeholder="01"
-            required
+            placeholder="1"
+            require
+            value="1"
           />
           <input
             name="year"
             id="year2"
             type="text"
             maxlength="4"
-            placeholder="1999"
+            placeholder="2022"
             required
+            value="2022"
           />,
 
           <h2 class="subtitle">Вторая дата:</h2>
@@ -128,8 +131,9 @@
             id="day1"
             type="text"
             maxlength="2"
-            placeholder="01"
+            placeholder="1"
             required
+            value="1"
           />
           <input
             name="month"
@@ -138,14 +142,16 @@
             maxlength="2"
             placeholder="01"
             required
+            value="1"
           />
           <input
             name="year"
             id="year1"
             type="text"
             maxlength="4"
-            placeholder="1999"
+            placeholder="2022"
             required
+            value="2022"
           />
           <!-- // -->
           <button class="btn" id="count-btn">Посчитать</button>
@@ -224,7 +230,7 @@
                           class="tbh"
                           id="date1"
                         >
-                          01.01.1
+                          01.01.2022
                         </td>
                       </tr>
                       <tr>
@@ -525,7 +531,7 @@
                           class="tbh"
                           id="date2"
                         >
-                          01.01.1
+                          01.01.2022
                         </td>
                       </tr>
                       <tr>
@@ -821,7 +827,9 @@
                   colspan="7"
                   class="tbh"
                   id="date3"
-                ></td>
+                >
+                  01.01.2022 и 01.01.2022
+                </td>
               </tr>
               <tr>
                 <td width="14%">&nbsp;</td>
@@ -1020,12 +1028,12 @@
                 <td width="14%">&nbsp;</td>
               </tr>
               <tr>
-                <td align="center" valign="middle" colspan="7">
+                <!-- <td align="center" valign="middle" colspan="7">
                   <br />
                   Позиций из персонального портрета первого человека: 8
                   <br />
                   Позиций из персонального портрета второго человека: 8
-                </td>
+                </td> -->
               </tr>
             </tbody>
           </table>

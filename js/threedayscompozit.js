@@ -5,23 +5,58 @@ const leftTable = document.querySelector("#left-table");
 const centerTable = document.querySelector("#center-table");
 
 const leftTableDate = document.querySelector("#left-table-date");
-const rightTableDate = document.querySelector("#right-table-date");
-const centerTableDate = document.querySelector("#center-table-date");
+const centerTableDate = document.querySelector("#right-table-date");
+const rightTableDate = document.querySelector("#center-table-date");
+const bottomTableDate = document.querySelector("#bottom-table-date");
+//POSITIONS from LEft table
+const leftPosition1 = document.querySelector("#left-position1");
+const leftPosition2 = document.querySelector("#left-position2");
+const leftPosition3 = document.querySelector("#left-position3");
+const leftPosition4 = document.querySelector("#left-position4");
+const leftPosition5 = document.querySelector("#left-position5");
+const leftPosition6 = document.querySelector("#left-position6");
+const leftPosition7 = document.querySelector("#left-position7");
+const leftPosition8 = document.querySelector("#left-position8");
+const leftPosition12 = document.querySelector("#left-position12");
+const leftPosition13 = document.querySelector("#left-position13");
+const leftPosition14 = document.querySelector("#left-position14");
+//POSITIONS from CENTER table
+const centerPosition1 = document.querySelector("#center-position1");
+const centerPosition2 = document.querySelector("#center-position2");
+const centerPosition3 = document.querySelector("#center-position3");
+const centerPosition4 = document.querySelector("#center-position4");
+const centerPosition5 = document.querySelector("#center-position5");
+const centerPosition6 = document.querySelector("#center-position6");
+const centerPosition7 = document.querySelector("#center-position7");
+const centerPosition8 = document.querySelector("#center-position8");
+const centerPosition12 = document.querySelector("#center-position12");
+const centerPosition13 = document.querySelector("#center-position13");
+const centerPosition14 = document.querySelector("#center-position14");
+//POSITIONS from RIGHT table
+const rightPosition1 = document.querySelector("#right-position1");
+const rightPosition2 = document.querySelector("#right-position2");
+const rightPosition3 = document.querySelector("#right-position3");
+const rightPosition4 = document.querySelector("#right-position4");
+const rightPosition5 = document.querySelector("#right-position5");
+const rightPosition6 = document.querySelector("#right-position6");
+const rightPosition7 = document.querySelector("#right-position7");
+const rightPosition8 = document.querySelector("#right-position8");
+const rightPosition12 = document.querySelector("#right-position12");
+const rightPosition13 = document.querySelector("#right-position13");
+const rightPosition14 = document.querySelector("#right-position14");
+//POSITIONS from BOTTOM (result sum of 3 top tables all) table
+const resultSumAll1 = document.querySelector("#sum-all-result1");
+const resultSumAll2 = document.querySelector("#sum-all-result2");
+const resultSumAll3 = document.querySelector("#sum-all-result3");
+const resultSumAll4 = document.querySelector("#sum-all-result4");
+const resultSumAll5 = document.querySelector("#sum-all-result5");
+const resultSumAll6 = document.querySelector("#sum-all-result6");
+const resultSumAll7 = document.querySelector("#sum-all-result7");
+const resultSumAll8 = document.querySelector("#sum-all-result8");
+const resultSumAll13 = document.querySelector("#sum-all-result13");
+const resultSumAll14 = document.querySelector("#sum-all-result14");
 
-//Romanazed dates from left table
-const leftPosition1 = document.querySelector("#position1");
-const leftPosition2 = document.querySelector("#position2");
-const leftPosition3 = document.querySelector("#position3");
-const leftPosition4 = document.querySelector("#position4");
-const leftPosition5 = document.querySelector("#position5");
-const leftPosition6 = document.querySelector("#position6");
-const leftPosition7 = document.querySelector("#position7");
-const leftPosition8 = document.querySelector("#position8");
-const leftPosition12 = document.querySelector("#position12");
-const leftPosition13 = document.querySelector("#position13");
-const leftPosition14 = document.querySelector("#position14");
-
-//
+//---------------------------//
 form.addEventListener("submit", getFormValue);
 function getFormValue(event) {
   event.preventDefault();
@@ -43,40 +78,82 @@ function getFormValue(event) {
     month: month1.value,
     year: year1.value,
   };
-  const dataRight = {
+  const dataCenter = {
     day: day2.value,
     month: month2.value,
     year: year2.value,
   };
-  const dataCenter = {
+  const dataRight = {
     day: day3.value,
     month: month3.value,
     year: year3.value,
   };
-
   //Writing to document the date
-  leftTableDate.innerHTML = `${dataRight.day}.${dataRight.month}.${dataRight.year}`;
-  rightTableDate.innerHTML = `${dataLeft.day}.${dataLeft.month}.${dataLeft.year}`;
+  leftTableDate.innerHTML = `${dataLeft.day}.${dataLeft.month}.${dataLeft.year}`;
+  rightTableDate.innerHTML = `${dataRight.day}.${dataRight.month}.${dataRight.year} `;
   centerTableDate.innerHTML = `${dataCenter.day}.${dataCenter.month}.${dataCenter.year}`;
+  bottomTableDate.innerHTML = `${dataLeft.day}.${dataLeft.month}.${dataLeft.year} и ${dataCenter.day}.${dataCenter.month}.${dataCenter.year} и ${dataRight.day}.${dataRight.month}.${dataRight.year}`;
   //Result of LEFT TABLE
-  const leftTable = resultLeftTable(dataLeft);
-  //romanizing & Writing to document
-  leftPosition1.innerHTML = romanize(resultLeftTable.leftPosition1);
-  leftPosition2.innerHTML = romanize(resultLeftTable.leftPosition2);
-  leftPosition3.innerHTML = romanize(resultLeftTable.leftPosition3);
-  leftPosition4.innerHTML = romanize(resultLeftTable.leftPosition4);
-  leftPosition5.innerHTML = romanize(resultLeftTable.leftPosition5);
-  leftPosition6.innerHTML = romanize(resultLeftTable.leftPosition6);
-  leftPosition7.innerHTML = romanize(resultLeftTable.leftPosition7);
-  leftPosition8.innerHTML = romanize(resultLeftTable.leftPosition8);
-  leftPosition12.innerHTML = romanize(resultLeftTable.leftPosition12);
-  leftPosition13.innerHTML = romanize(resultLeftTable.leftPosition13);
-  leftPosition14.innerHTML = romanize(resultLeftTable.leftPosition14);
+  const resultLeft = resultPsiPotret(dataLeft);
+  const resultCenter = resultPsiPotret(dataCenter);
+  const resultRight = resultPsiPotret(dataRight);
+  const resultSumAll = resultPsiPotretAll(
+    resultLeft,
+    resultCenter,
+    resultRight
+  );
+  //romanizing & Writing to document LEFT TABLE
+  leftPosition1.innerHTML = romanize(resultLeft.p1);
+  leftPosition2.innerHTML = romanize(resultLeft.p2);
+  leftPosition3.innerHTML = romanize(resultLeft.p3);
+  leftPosition4.innerHTML = romanize(resultLeft.p4);
+  leftPosition5.innerHTML = romanize(resultLeft.p5);
+  leftPosition6.innerHTML = romanize(resultLeft.p6);
+  leftPosition7.innerHTML = romanize(resultLeft.p7);
+  leftPosition8.innerHTML = romanize(resultLeft.p8);
+  leftPosition12.innerHTML = romanize(resultLeft.p12);
+  leftPosition13.innerHTML = romanize(resultLeft.p13);
+  leftPosition14.innerHTML = romanize(resultLeft.p14);
+  //romanizing & Writing to document CENTER TABLE
+  centerPosition1.innerHTML = romanize(resultCenter.p1);
+  centerPosition2.innerHTML = romanize(resultCenter.p2);
+  centerPosition3.innerHTML = romanize(resultCenter.p3);
+  centerPosition4.innerHTML = romanize(resultCenter.p4);
+  centerPosition5.innerHTML = romanize(resultCenter.p5);
+  centerPosition6.innerHTML = romanize(resultCenter.p6);
+  centerPosition7.innerHTML = romanize(resultCenter.p7);
+  centerPosition8.innerHTML = romanize(resultCenter.p8);
+  centerPosition12.innerHTML = romanize(resultCenter.p12);
+  centerPosition13.innerHTML = romanize(resultCenter.p13);
+  centerPosition14.innerHTML = romanize(resultCenter.p14);
+  //romanizing & Writing to document RIGHT TABLE
+  rightPosition1.innerHTML = romanize(resultRight.p1);
+  rightPosition2.innerHTML = romanize(resultRight.p2);
+  rightPosition3.innerHTML = romanize(resultRight.p3);
+  rightPosition4.innerHTML = romanize(resultRight.p4);
+  rightPosition5.innerHTML = romanize(resultRight.p5);
+  rightPosition6.innerHTML = romanize(resultRight.p6);
+  rightPosition7.innerHTML = romanize(resultRight.p7);
+  rightPosition8.innerHTML = romanize(resultRight.p8);
+  rightPosition12.innerHTML = romanize(resultRight.p12);
+  rightPosition13.innerHTML = romanize(resultRight.p13);
+  rightPosition14.innerHTML = romanize(resultRight.p14);
+  //romanizing & Writing to document BOTTOM (sum of 3 top tables) TABLE
+  resultSumAll1.innerHTML = resultSumAll.p1;
+  resultSumAll2.innerHTML = resultSumAll.p2;
+  resultSumAll3.innerHTML = resultSumAll.p3;
+  resultSumAll4.innerHTML = resultSumAll.p4;
+  resultSumAll5.innerHTML = resultSumAll.p5;
+  resultSumAll6.innerHTML = resultSumAll.p6;
+  resultSumAll7.innerHTML = resultSumAll.p7;
+  resultSumAll8.innerHTML = resultSumAll.p8;
+  resultSumAll13.innerHTML = resultSumAll.p13;
+  resultSumAll14.innerHTML = resultSumAll.p14;
 }
 
 //---------------Counting the left TABLE------------
 function sumYear(year) {
-  return year
+  return String(year)
     .split("")
     .reduce((sum, current) =>
       Number(sum) + Number(current) > 22
@@ -85,58 +162,72 @@ function sumYear(year) {
     );
 }
 
-function resultLeftTable(data) {
-  const leftPosition1 =
-    Number(data.day) > 22 ? Number(data.day) - 22 : Number(data.day);
-  const leftPosition2 = Number(data.month);
-  const leftPosition3 = sumYear(data.year);
-  const leftPosition4 =
-    leftPosition1 + leftPosition2 > 22
-      ? leftPosition1 + leftPosition2 - 22
-      : leftPosition1 + leftPosition2;
-  const leftPosition5 =
-    leftPosition2 + leftPosition3 > 22
-      ? leftPosition2 + leftPosition3 - 22
-      : leftPosition2 + leftPosition3;
-  const leftPosition6 =
-    leftPosition4 + leftPosition5 > 22
-      ? leftPosition4 + leftPosition5 - 22
-      : leftPosition4 + leftPosition5;
-  const leftPosition7 =
-    leftPosition1 + leftPosition5 > 22
-      ? leftPosition1 + leftPosition5 - 22
-      : leftPosition1 + leftPosition5;
-  const leftPosition8 =
-    leftPosition2 + leftPosition6 > 22
-      ? leftPosition2 + leftPosition6 - 22
-      : leftPosition2 + leftPosition6;
-  const leftPosition12 =
-    leftPosition7 + leftPosition8 > 22
-      ? leftPosition7 + leftPosition8 - 22
-      : leftPosition7 + leftPosition8;
-  const leftPosition13 =
-    leftPosition1 + leftPosition4 + leftPosition6 > 22
-      ? leftPosition1 + leftPosition4 + leftPosition6 - 22
-      : leftPosition1 + leftPosition4 + leftPosition6;
-  const leftPosition14 =
-    leftPosition3 + leftPosition5 + leftPosition6 > 22
-      ? leftPosition3 + leftPosition5 + leftPosition6 - 22
-      : leftPosition3 + leftPosition5 + leftPosition6;
+function resultPsiPotret(data) {
+  const p1 = Number(data.day) > 22 ? Number(data.day) - 22 : Number(data.day);
+  const p2 = Number(data.month);
+  const p3 = sumYear(data.year);
+  const p4 = p1 + p2 > 22 ? p1 + p2 - 22 : p1 + p2;
+  const p5 = p2 + p3 > 22 ? p2 + p3 - 22 : p2 + p3;
+  const p6 = p4 + p5 > 22 ? p4 + p5 - 22 : p4 + p5;
+  const p7 = p1 + p5 > 22 ? p1 + p5 - 22 : p1 + p5;
+  const p8 = p2 + p6 > 22 ? p2 + p6 - 22 : p2 + p6;
+  const p12 = p7 + p8 > 22 ? p7 + p8 - 22 : p7 + p8;
+  const p13 = p1 + p4 + p6 > 22 ? p1 + p4 + p6 - 22 : p1 + p4 + p6;
+  const p14 = p3 + p5 + p6 > 22 ? p3 + p5 + p6 - 22 : p3 + p5 + p6;
 
   return {
-    leftPosition1,
-    leftPosition2,
-    leftPosition3,
-    leftPosition4,
-    leftPosition5,
-    leftPosition6,
-    leftPosition7,
-    leftPosition8,
-    leftPosition12,
-    leftPosition13,
-    leftPosition14,
+    p1,
+    p2,
+    p3,
+    p4,
+    p5,
+    p6,
+    p7,
+    p8,
+    p12,
+    p13,
+    p14,
   };
 }
+
+function summThreePosition(pos1, pos2, pos3) {
+  let res = Number(pos1) + Number(pos2) + Number(pos3);
+
+  while (res > 22) {
+    res -= 22;
+  }
+  if (res === 0) {
+    res = 22;
+  }
+  return res;
+}
+
+function resultPsiPotretAll(left, center, right) {
+  let p1 = summThreePosition(left.p1, center.p1, right.p1);
+  let p2 = summThreePosition(left.p2, center.p2, right.p2);
+  let p3 = summThreePosition(left.p3, center.p3, right.p3);
+  let p4 = summThreePosition(left.p4, center.p4, right.p4);
+  let p5 = summThreePosition(left.p5, center.p5, right.p5);
+  let p6 = summThreePosition(left.p6, center.p6, right.p6);
+  let p7 = summThreePosition(left.p7, center.p7, right.p7);
+  let p8 = summThreePosition(left.p8, center.p8, right.p8);
+  let p13 = summThreePosition(left.p13, center.p13, right.p13);
+  let p14 = summThreePosition(left.p14, center.p14, right.p14);
+
+  return {
+    p1: romanize(p1),
+    p2: romanize(p2),
+    p3: romanize(p3),
+    p4: romanize(p4),
+    p5: romanize(p5),
+    p6: romanize(p6),
+    p7: romanize(p7),
+    p8: romanize(p8),
+    p13: romanize(p13),
+    p14: romanize(p14),
+  };
+}
+
 //Romanizing functionality
 function romanize(num) {
   if (isNaN(num)) return NaN;
