@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Психологические портреты</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <link rel="stylesheet" href="css/dayscompoz.css" />
+
+    <style>
+      .tbl {
+        border: 1px solid rgb(36, 36, 36);
+      }
+      .tbh {
+        border: 1px solid #99ccff;
+        background: #99ccff;
+        -webkit-box-shadow: 0px 10px 15px -5px rgba(153, 204, 255, 0.31);
+        -moz-box-shadow: 0px 10px 15px -5px rgba(153, 204, 255, 0.31);
+        box-shadow: 0px 10px 15px -5px rgba(153, 204, 255, 0.31);
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .nil {
+        border: 1px solid #ffffff;
+        background-color: #ffffff;
+      }
+      .ind {
+        font-size: 24px;
+        font-weight: bold;
+        color: rgb(36, 36, 36);
+      }
+      .ind_s {
+        font-size: 16px;
+        font-weight: bold;
+        color: rgb(36, 36, 36);
+      }
+      .sub {
+        font-size: 12px;
+        color: #999999;
+      }
+      .sub_s {
+        font-size: 10px;
+        white-space: nowrap;
+        color: #999999;
+      }
+      .inda {
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(36, 36, 36);
+      }
+      .gray {
+        color: #999999;
+      }
+      .eso ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+      }
+      .eso ul li {
+        float: left;
+        padding: 1px;
+        font-size: 12px;
+      }
+      .anons {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+        <nav class="shift">
+          <ul>
+            <li class="main-link">
+              <a id="logo" target="_blank" href="https://likarudneva.com/"
+                >Главная</a
+              >
+            </li>
+            <li><a href="/index.html">Основная</a></li>
+            <li><a href="/personal.html">Личностный портрет</a></li>
+            <li><a href="/dayscompozit.html">Совместимость</a></li>
+            <li><a href="/calendar.html">Прогноз</a></li>
+          </ul>
+        </nav>
+      </header>
+    </header>
+    <div class="compozit-drop">
+      <ul>
+        <li><a href="/dayscompozit.html">Двух дат</a></li>
+        <li><a href="/threedayscompozit.html">Трех дат</a></li>
+        <li><a href="/dayscompozfour.html">Четырех дат</a></li>
+      </ul>
+    </div>
+    <div class="main-section">
+      <div class="main-content">
+        <h2>Введите дату рождения</h2>
+        <div id="form" action="">
+          <h2 class="subtitle">Первая дата:</h2>
+          <input
+            name="day"
+            id="day1"
+            type="number"
+            maxlength="2"
+            placeholder="1"
+            required
+            value="01"
+          />
+          <input
+            name="month"
+            id="month1"
+            type="number"
+            maxlength="2"
+            placeholder="1"
+            require
+            value="1"
+            min="1"
+            max="12"
+          />
+          <input
+            class="last"
+            name="year"
+            id="year1"
+            type="number"
+            maxlength="4"
+            placeholder="2022"
+            required
+            value="2022"
+          />,
+
+          <h2 class="subtitle">Вторая дата:</h2>
+          <input
+            name="day"
+            id="day2"
+            type="number"
+            maxlength="2"
+            placeholder="1"
+            required
+            value="01"
+          />
+          <input
+            name="month"
+            id="month2"
+            type="number"
+            maxlength="2"
+            placeholder="01"
+            required
+            value="1"
+          />
+          <input
+            class="last"
+            name="year"
+            id="year2"
+            type="number"
+            maxlength="4"
+            placeholder="2022"
+            required
+            value="2022"
+          />
+          <button class="btn" id="count-btn">Посчитать</button>
+        </div>
+      </div>
+      <div class="main-content-2">
+        <h2>Введите дату рождения</h2>
+        <div id="form2" action="">
+          <h2 class="subtitle">Первая дата:</h2>
+          <input
+            name="day"
+            id="day3"
+            type="number"
+            maxlength="2"
+            placeholder="1"
+            required
+            value="01"
+          />
+          <input
+            name="month"
+            id="month3"
+            type="number"
+            maxlength="2"
+            placeholder="1"
+            require
+            value="01"
+          />
+          <input
+            class="last"
+            name="year"
+            id="year3"
+            type="number"
+            maxlength="4"
+            placeholder="2022"
+            required
+            value="2022"
+          />,
+
+          <h2 class="subtitle">Вторая дата:</h2>
+          <input
+            name="day"
+            id="day4"
+            type="number"
+            maxlength="2"
+            placeholder="1"
+            required
+            value="01"
+          />
+          <input
+            name="month"
+            id="month4"
+            type="number"
+            maxlength="2"
+            placeholder="01"
+            required
+            value="01"
+            max="12"
+          />
+          <input
+            class="last"
+            name="year"
+            id="year4"
+            type="number"
+            maxlength="4"
+            placeholder="2022"
+            required
+            value="2022"
+          />
+          <button class="btn" id="count-btn2">Посчитать</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns">
+      <section class="column-1" id="table">
+        <tr>
+          <td>
+            <br />
+            <table width="100%" border="0" align="center">
+              <tbody>
+                <tr>
+                    <td width="45%" align="left" valign="middle" id="left_table">
+                        </td>
+
+                  <td width="10%" align="center" valign="middle">
+                    <font size="7">+</font>
+                  </td>
+                  <td width="45%" align="right" valign="middle" id="left_table2">
+                    
+                  </td>
+            
+          </td>
+                </tr>
+              </tbody>
+            </table>
+            <center><font size="7">=</font></center>
+            <!-- -- -- HERE PAST THE ANSWER TABLE-- -- -->
+            <div id="answer_left">
+                
+            </div>
+          </td>
+        </tr>
+        
+      </section>
+      <section class="column-1" id="table">
+        <tr>
+          <td>
+            <br />
+            <table width="100%" border="0" align="center">
+              <tbody>
+                <tr>
+
+                  <td width="45%" align="left" valign="middle" id="right_table">
+                </td>
+
+          <td width="10%" align="center" valign="middle">
+            <font size="7">+</font>
+          </td>
+          <td width="45%" align="right" valign="middle" id="right_table2">
+            
+          </td>
+                </tr>
+              </tbody>
+            </table>
+            <center><font size="7">=</font></center>
+            <!-- -- -- HERE PAST THE ANSWER TABLE-- -- -->
+            <div id="answer_right">
+                
+            </div>
+          </td>
+        </tr>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <h2>Остались вопросы?</h2>
+      <p>
+        Все вопросы можно задать в
+        <a class="contacts" target="_blank" href="https://t.me/+79118308394"
+          >Telegram</a
+        >,
+        <a class="contacts" target="_blank" href="https://wa.me/+79118308394"
+          >WhatsApp</a
+        >
+        на номер <a target="_blank" class="phone" href="tel:+7(911)830-83-94">+7 (911) 830-83-94</a>
+      </p>
+      <div class="info">
+        <span>
+          <a target="_blank" href="https://t.me/+79118308394"
+            ><img src="img/icons8-telegram-app-50.png" alt="Telegram"
+          /></a>
+          <a target="_blank" href="https://wa.me/+79118308394"
+            ><img src="img/icons8-whatsapp-64.png" alt="WhatsApp"
+          /></a>
+          <a target="_blank" href="https://vk.com/angelika_rudneva"
+            ><img src="img/icons8-vk-circled-60.png" alt="VK"
+          /></a>
+          <a target="_blank" href="mailto:info@likarudneva.com"
+            ><img src="img/icons8-mail-50.png" alt="Mail"
+          /></a>
+        </span>
+      </div>
+      <span class="copyright"
+        >Made with ♥ by
+        <a href="https://likarudneva.com/"> Angelika Rudneva</a></span
+      >
+    </footer>
+    <script src="js/daysfor.js"></script>
+  </body>
+</html>

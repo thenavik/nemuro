@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   position: relative;
   font-family: "Libre Baskerville", serif;
@@ -5,13 +9,16 @@ body {
   font-weight: 600;
   color: rgb(36, 36, 36);
 }
+
 /* NAVIGATION */
 nav {
   width: 100%;
   margin: 0 auto;
   background: #fff;
   padding: 10px 0;
-  box-shadow: 0px 3px 0px #99ccff;
+  -webkit-box-shadow: 0px 4px 15px 1px rgba(153, 204, 255, 0.25);
+  -moz-box-shadow: 0px 4px 15px 1px rgba(153, 204, 255, 0.25);
+  box-shadow: 0px 4px 15px 1px rgba(153, 204, 255, 0.25);
 }
 
 nav ul {
@@ -76,6 +83,24 @@ nav.shift ul li a:hover:after {
   height: 100%;
 }
 
+/************ Styles for DAYSCOMPOZFOUR **************/
+.columns {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.column-1 {
+  width: 50%;
+  padding: 0 20px;
+}
+.column-2 {
+  width: 50%;
+  padding: 0 15px;
+}
+
+/**********Styles for INPUTS**********/
+
 /*DROPDOWN MENU COMPOZIT DAYS*/
 .compozit-drop {
   width: 100%;
@@ -111,23 +136,115 @@ nav.shift ul li a:hover:after {
 }
 /*======================*/
 
-form {
+#form {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-form input {
-  margin: 5px 10px;
+#form input {
+  margin: 0px 2px;
+}
+#form2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form2 input {
+  margin: 0px 2px;
 }
 
 .btn {
   margin: 0 10px;
 }
 
-h2.subtitle {
-  font-size: 16px;
+section {
+  margin-top: 30px !important;
+  margin-bottom: 100px !important;
+}
+
+.main-content-2 h2 {
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+.main-content-2 h2.subtitle {
+  font-size: 14px;
   font-weight: 400;
+}
+
+/*======================*/
+.main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content h2 {
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+.main-content h2.subtitle {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.main-content form {
+  padding: 10px;
+}
+
+input {
+  max-width: 15px;
+  padding: 7px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid #99ccff;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: transparent;
+}
+input.last {
+  max-width: 32px;
+}
+input:focus {
+  outline: 1px solid #99ccff;
+}
+
+input::placeholder {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.compozit {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  padding: 7px 5px;
+  border-radius: 10px;
+  border: 1px solid #99ccff;
+  background-color: #99ccff;
+  -webkit-box-shadow: 0px 4px 15px 1px rgba(153, 204, 255, 0.25);
+  -moz-box-shadow: 0px 4px 15px 1px rgba(153, 204, 255, 0.25);
+  box-shadow: 0px 4px 15px 1px rgba(153, 204, 255, 0.25);
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(36, 36, 36);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #99ccff;
+  color: #fff;
+  -webkit-box-shadow: 0px 10px 15px 1px rgba(153, 204, 255, 0.31);
+  -moz-box-shadow: 0px 10px 15px 1px rgba(153, 204, 255, 0.31);
+  box-shadow: 0px 10px 15px 1px rgba(153, 204, 255, 0.31);
 }
 
 section {
@@ -185,5 +302,9 @@ footer span.copyright a {
 }
 footer span.copyright {
   font-size: 10px;
+}
+.phone {
+  text-decoration: none;
+  color: rgb(36, 36, 36);
 }
 /* --------------------FOOTER----------------- */ ;

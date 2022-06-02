@@ -1,6 +1,7 @@
-const form = document.querySelector("#form");
+const btn = document.querySelector("#count-btn");
 const table = document.querySelector("#table");
 const tableMiddle = document.querySelector("#tableMiddle");
+document.getElementById("year").value = new Date().getFullYear();
 
 // получаем все позиции
 const p1Html = document.querySelector("#p1");
@@ -85,7 +86,6 @@ const midFSub = document.querySelector("#midF-sub");
 const midH = document.querySelector("#midH");
 const midHSub = document.querySelector("#midH-sub");
 
-// console.log("ff", taroArr1.children[3]);
 //Полyчаем sub
 const subP13 = document.querySelector("#sub-p13");
 
@@ -103,7 +103,7 @@ const taroTable = [
       name: "Близнецы",
     },
     time: "44д",
-    element: "../img/air.jpg",
+    element: "&#128769;",
     logic: {
       type: "Л",
       name: "Логика",
@@ -132,7 +132,7 @@ const taroTable = [
       name: "Луна",
     },
     time: "14д",
-    element: "../img/water.jpg",
+    element: "&#128772;",
     logic: {
       type: "И",
       name: "Интуициая",
@@ -161,7 +161,7 @@ const taroTable = [
       name: "Венера",
     },
     time: "2м",
-    element: "../img/earth.jpg",
+    element: "&#128771;",
     logic: {
       type: "Л",
       name: "Логика",
@@ -190,7 +190,7 @@ const taroTable = [
       name: "Марс",
     },
     time: "11м",
-    element: "../img/fire.jpg",
+    element: "	&#128770;",
     logic: {
       type: "Л",
       name: "Логика",
@@ -219,7 +219,7 @@ const taroTable = [
       name: "Сатурн",
     },
     time: "15л",
-    element: "../img/air.jpg",
+    element: "&#128769;",
     logic: {
       type: "И",
       name: "Интуиция",
@@ -248,7 +248,7 @@ const taroTable = [
       name: "Телец",
     },
     time: "2м",
-    element: "../img/water.jpg",
+    element: "&#128772;",
     logic: {
       type: "И",
       name: "Интуиция",
@@ -277,7 +277,7 @@ const taroTable = [
       name: "Уран",
     },
     time: "42г",
-    element: "../img/fire.jpg",
+    element: "&#128770;",
     logic: {
       type: "Л",
       name: "Логика",
@@ -306,7 +306,7 @@ const taroTable = [
       name: "Весы",
     },
     time: "6л",
-    element: "../img/air.jpg",
+    element: "&#128769;",
     logic: {
       type: "Л",
       name: "Логика",
@@ -335,7 +335,7 @@ const taroTable = [
       name: "Козерог",
     },
     time: "15л",
-    element: "../img/earth.jpg",
+    element: "&#128771;",
     logic: {
       type: "И",
       name: "Интуиция",
@@ -364,7 +364,7 @@ const taroTable = [
       name: "Скорпион",
     },
     time: "6л",
-    element: "../img/earth.jpg",
+    element: "&#128771;",
     logic: {
       type: "Л",
       name: "Логика",
@@ -393,7 +393,7 @@ const taroTable = [
       name: "Солнце",
     },
     time: "6м",
-    element: "../img/fire.jpg",
+    element: "&#128770;",
     logic: {
       type: "И",
       name: "Интуиция",
@@ -422,7 +422,7 @@ const taroTable = [
       name: "Нептун",
     },
     time: "81г",
-    element: "../img/water.jpg",
+    element: "&#128772;",
     logic: {
       type: "И",
       name: "Интуиция",
@@ -451,7 +451,7 @@ const taroTable = [
       name: "Плутон",
     },
     time: "н",
-    element: "../img/fire.jpg",
+    element: "&#128770;",
     logic: {
       type: "И",
       name: "Интуиция",
@@ -480,7 +480,7 @@ const taroTable = [
       name: "Дева",
     },
     time: "44д",
-    element: "../img/air.jpg",
+    element: "&#128769;",
     logic: {
       type: "Л",
       name: "Логика",
@@ -509,7 +509,7 @@ const taroTable = [
       name: "Рыбы",
     },
     time: "н",
-    element: "../img/fire.jpg",
+    element: "&#128770;",
     logic: {
       type: "И",
       name: "Интуиция",
@@ -538,7 +538,7 @@ const taroTable = [
       name: "Стрелец",
     },
     time: "15л",
-    element: "../img/earth.jpg",
+    element: "&#128771;",
     logic: {
       type: "Л",
       name: "Логика",
@@ -567,7 +567,7 @@ const taroTable = [
       name: "Меркурий",
     },
     time: "44д",
-    element: "../img/water.jpg",
+    element: "&#128772;",
     logic: {
       type: "И",
       name: "Интуиция",
@@ -596,7 +596,7 @@ const taroTable = [
       name: "Рак",
     },
     time: "28д",
-    element: "../img/water.jpg",
+    element: "&#128772;",
     logic: {
       type: "И",
       name: "Интуиция",
@@ -625,7 +625,7 @@ const taroTable = [
       name: "Лев",
     },
     time: "1г",
-    element: "../img/fire.jpg",
+    element: "&#128770;",
     logic: {
       type: "Л",
       name: "Логика",
@@ -654,7 +654,7 @@ const taroTable = [
       name: "Юпитер",
     },
     time: "6л",
-    element: "../img/earth.jpg",
+    element: "&#128771;",
     logic: {
       type: "Л",
       name: "Логика",
@@ -683,7 +683,7 @@ const taroTable = [
       name: "Водолей",
     },
     time: "42г",
-    element: "../img/air.jpg",
+    element: "&#128769;",
     logic: {
       type: "И",
       name: "Интуиция",
@@ -712,7 +712,7 @@ const taroTable = [
       name: "Овен",
     },
     time: "1м",
-    element: "../img/fire.jpg",
+    element: "&#128770;",
     logic: {
       type: "И",
       name: "Интуиция",
@@ -734,14 +734,14 @@ const taroTable = [
 
 getFormValue();
 
-form.addEventListener("submit", getFormValue);
-function getFormValue(event) {
+btn.addEventListener("click", getFormValue);
+function getFormValue() {
   // event.preventDefault();
   table.classList.remove("none");
   tableMiddle.classList.remove("none");
-  let day = form.querySelector('[name="day"]');
-  let month = form.querySelector('[name="month"]');
-  let year = form.querySelector('[name="year"]');
+  let day = document.getElementById("day");
+  let month = document.getElementById("month");
+  let year = document.getElementById("year");
 
   const data = {
     day: day.value,
@@ -886,7 +886,8 @@ function getFormValue(event) {
     taro.children[0].title = filtrTaroTable(positionTaro)[0].sex.name;
     taro.children[1].innerHTML = filtrTaroTable(positionTaro)[0].zodiac.type;
     taro.children[1].title = filtrTaroTable(positionTaro)[0].zodiac.name;
-    taro.children[2].children[0].src = filtrTaroTable(positionTaro)[0].element;
+    taro.children[2].children[0].innerHTML =
+      filtrTaroTable(positionTaro)[0].element;
     taro.children[3].innerHTML = filtrTaroTable(positionTaro)[0].time;
     taro.children[3].title = filtrTaroTable(positionTaro)[0].time;
     taro.children[4].innerHTML = filtrTaroTable(positionTaro)[0].logic.type;
@@ -965,7 +966,7 @@ function getFormValue(event) {
 function resultPsiPotret(data) {
   const p1 = Number(data.day) > 22 ? Number(data.day) - 22 : Number(data.day);
   const p2 = Number(data.month);
-  const p3 = data.year
+  const p3 = String(data.year)
     .split("")
     .reduce((sum, current) =>
       Number(sum) + Number(current) > 22
