@@ -1,6 +1,6 @@
 section {
   width: 95vw;
-  margin: 0 auto;
+  margin: 30px auto !important;
   font-size: 14px !important;
 }
 .color-red {
@@ -12,6 +12,43 @@ section {
   justify-content: center;
 }
 
+.mtop-20 {
+  margin-top: 20px;
+}
+/*DROPDOWN MENU COMPOZIT DAYS*/
+.compozit-drop {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.compozit-drop ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  width: 30%;
+  color: rgb(36, 36, 36);
+  box-shadow: none !important;
+}
+.compozit-drop ul li {
+  list-style: none;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid #4285c7;
+  margin: 5px 5px;
+}
+.compozit-drop ul li a {
+  text-decoration: none;
+  color: rgb(36, 36, 36);
+}
+.compozit-drop ul li:hover {
+  background-color: #99ccff;
+}
+
+.compozit-drop ul li:focus {
+  background-color: #99ccff;
+}
+/*======================*/
 input {
   margin: 0px 10px;
 }
@@ -36,6 +73,9 @@ select {
   padding: 10px;
   background-image: none;
   cursor: pointer;
+  font-weight: 800;
+  font-size: 16px;
+  font-family: "Libre Baskerville", serif;
 }
 select::-ms-expand {
   display: none;
@@ -59,4 +99,32 @@ select::-ms-expand {
 }
 .select:hover::after {
   color: #99ccff;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pag-item {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pag-list {
+  margin-right: 2px;
+  margin-left: 2px;
+  list-style: none;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border: 1px solid #99ccff;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.pag-list:hover {
+  background-color: #99ccff;
 }

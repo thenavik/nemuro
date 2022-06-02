@@ -188,4 +188,28 @@ a.contacts:hover {
   border-bottom: 2px solid #fff;
   color: #fff;
 }
-/* --------------------FOOTER----------------- */
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+footer span a img {
+  width: 40px;
+  padding: 7px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+footer span a img:hover {
+  background: #4285c7;
+}
+footer span.copyright a {
+  text-decoration: none;
+  color: #fff;
+}
+footer span.copyright {
+  font-size: 10px;
+}
+/* --------------------FOOTER----------------- */ ;

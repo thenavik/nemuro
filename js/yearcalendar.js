@@ -1,6 +1,5 @@
-let $page = 1;
 // events
-document.getElementById("forecast_month").value = new Date().getMonth() + 1;
+// document.getElementById("forecast_month").value = new Date().getMonth() + 1;
 calculate();
 document.getElementById("count-btn").addEventListener("click", () => {
   calculate();
@@ -8,32 +7,32 @@ document.getElementById("count-btn").addEventListener("click", () => {
 
 // functional
 function calculate() {
-  const month = document.getElementById("forecast_month").value;
+  //   const month = document.getElementById("forecast_month").value;
   const year = document.getElementById("forecast_year").value;
-  $page = month;
-  const calendar = document.getElementById("calendar_content");
-  generateCalendarData(calendar, year, month);
+  const dd = [
+    document.getElementById("calendar_content"),
+    document.getElementById("calendar_content1"),
+    document.getElementById("calendar_content2"),
+    document.getElementById("calendar_content3"),
+    document.getElementById("calendar_content4"),
+    document.getElementById("calendar_content5"),
+    document.getElementById("calendar_content6"),
+    document.getElementById("calendar_content7"),
+    document.getElementById("calendar_content8"),
+    document.getElementById("calendar_content9"),
+    document.getElementById("calendar_content10"),
+    document.getElementById("calendar_content11"),
+  ];
+  for (i = 0; i < dd.length; i++) {
+    generateCalendarData(dd[i], year, i + 1);
+  }
 }
+
 function validDate(value) {
   if (value <= 9) {
     return `0${value}`;
   }
   return value;
-}
-
-function nextPage() {
-  if ($page < 12) {
-    $page++;
-    document.getElementById("forecast_month").value = $page;
-    calculate();
-  }
-}
-function prePage() {
-  if ($page > 1) {
-    $page--;
-    document.getElementById("forecast_month").value = $page;
-    calculate();
-  }
 }
 
 function getBirthdayPositions() {
