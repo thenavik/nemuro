@@ -13,6 +13,7 @@ span.result-symbol {
   display: flex;
   justify-content: center;
   color: rgb(36, 36, 36);
+  margin-right: 10px;
 }
 
 /*DROPDOWN MENU COMPOZIT DAYS*/
