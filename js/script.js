@@ -886,8 +886,7 @@ function getFormValue() {
     taro.children[0].title = filtrTaroTable(positionTaro)[0].sex.name;
     taro.children[1].innerHTML = filtrTaroTable(positionTaro)[0].zodiac.type;
     taro.children[1].title = filtrTaroTable(positionTaro)[0].zodiac.name;
-    taro.children[2].children[0].innerHTML =
-      filtrTaroTable(positionTaro)[0].element;
+    taro.children[2].innerHTML = filtrTaroTable(positionTaro)[0].element;
     taro.children[3].innerHTML = filtrTaroTable(positionTaro)[0].time;
     taro.children[3].title = filtrTaroTable(positionTaro)[0].time;
     taro.children[4].innerHTML = filtrTaroTable(positionTaro)[0].logic.type;

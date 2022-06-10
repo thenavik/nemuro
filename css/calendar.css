@@ -1,6 +1,6 @@
 section {
   width: 95vw;
-  margin: 30px auto !important;
+  margin: 20px auto !important;
   font-size: 14px !important;
 }
 .color-red {
@@ -107,24 +107,31 @@ select::-ms-expand {
   align-items: center;
 }
 
+.m10 {
+  margin: 10px;
+}
 .pag-item {
-  width: 20%;
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
 .pag-list {
   margin-right: 2px;
   margin-left: 2px;
   list-style: none;
   padding: 5px 10px;
-  margin-bottom: 20px;
+  font-size: 14px;
   cursor: pointer;
-  border: 1px solid #99ccff;
   border-radius: 10px;
   transition: all 0.5s ease;
 }
-
+span.pag-list {
+  background: none !important;
+  color: #000 !important;
+}
 .pag-list:hover {
   background-color: #99ccff;
+  color: #fff;
 }

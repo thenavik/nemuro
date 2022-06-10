@@ -75,13 +75,7 @@
     <header>
       <nav class="shift">
         <ul>
-          <li class="main-link">
-            <a id="logo" target="_blank" href="https://likarudneva.com/"
-              >Главная</a
-            >
-          </li>
-          <li><a href="/index.html">Основная</a></li>
-          <li><a href="/personal.html">Личностный портрет</a></li>
+          <li><a href="/personal.html">Личный портрет</a></li>
           <li><a href="/dayscompozit.html">Совместимость</a></li>
           <li><a href="/calendar.html">Прогноз</a></li>
         </ul>
@@ -93,9 +87,8 @@
         <li><a href="/yearcalendar.html">Прогноз на год</a></li>
       </ul>
     </div>
-    <div class="main-section">
+    <div class="main-section m10">
       <div class="main-content">
-        <h2>Введите дату для прогноза</h2>
         <div id="form" action="">
           <span>Дата рождения:</span>
           <input
@@ -162,10 +155,12 @@
     </section>
     <div class="pagination">
       <ul class="pag-item">
-        <li class="pag-list" onclick="prePage()">&#171; Предыдущий</li>
-        <li class="pag-list" onclick="nextPage()">Следующий &#187;</li>
+        <li class="pag-list" onclick="prePage()">&#10229; Предыдущий</li>
+        <span class="pag-list">&#10072;</span>
+        <li class="pag-list" onclick="nextPage()">Следующий &#10230;</li>
       </ul>
     </div>
+
     <footer class="footer">
       <h2>Остались вопросы?</h2>
       <p>
@@ -202,7 +197,6 @@
         <a href="https://likarudneva.com/"> Angelika Rudneva</a></span
       >
     </footer>
-
     <script src="js/calendar.js"></script>
   </body>
 </html>

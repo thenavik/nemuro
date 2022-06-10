@@ -1,0 +1,54 @@
+/* --------------------FOOTER----------------- */
+.footer {
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  background: #99ccff;
+  color: rgb(36, 36, 36);
+  width: 100%;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.footer p {
+  font-size: 14px;
+}
+a.contacts {
+  text-decoration: none;
+  color: rgb(36, 36, 36);
+  font-weight: 900;
+  transition: all 0.5s ease;
+}
+
+a.contacts:hover {
+  border-bottom: 2px solid #fff;
+  color: #fff;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+footer span.copyright a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+footer span.copyright {
+  font-size: 10px;
+}
+svg {
+  width: 40px;
+  height: 40px;
+  padding: 7px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+footer span a svg:hover {
+  background: #4285c7;
+}
+/* --------------------FOOTER----------------- */

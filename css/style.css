@@ -158,14 +158,13 @@ button {
   box-shadow: 0px 4px 15px 1px rgba(153, 204, 255, 0.25);
   font-size: 14px;
   font-weight: 600;
-  color: rgb(36, 36, 36);
+  color: #fff;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 button:hover {
-  background-color: #99ccff;
-  color: #fff;
+  background-color: #80b9f1;
   -webkit-box-shadow: 0px 10px 15px 1px rgba(153, 204, 255, 0.31);
   -moz-box-shadow: 0px 10px 15px 1px rgba(153, 204, 255, 0.31);
   box-shadow: 0px 10px 15px 1px rgba(153, 204, 255, 0.31);
@@ -210,20 +209,22 @@ a.contacts:hover {
   padding: 10px;
 }
 
-footer span a img {
+footer span.copyright a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+footer span.copyright {
+  font-size: 10px;
+}
+svg {
   width: 40px;
+  height: 40px;
   padding: 7px;
   border-radius: 50%;
   transition: all 0.3s ease;
 }
-footer span a img:hover {
+footer span a svg:hover {
   background: #4285c7;
-}
-footer span.copyright a {
-  text-decoration: none;
-  color: #fff;
-}
-footer span.copyright {
-  font-size: 10px;
 }
 /* --------------------FOOTER----------------- */ ;
