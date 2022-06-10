@@ -262,6 +262,38 @@ function getFormValue(event) {
   rightAnswer14.innerHTML = `${romanize(resultRight.p3)}+${romanize(
     resultRight.p5
   )}+${romanize(resultRight.p6)}`;
+
+  // BOTTOM ANSWER POSITIONS
+  bottomAnswer1.innerHTML = `${romanize(resultLeft.p1)} + ${romanize(
+    resultCenter.p1
+  )} + ${romanize(resultRight.p1)}`;
+  bottomAnswer2.innerHTML = `${romanize(resultLeft.p2)} + ${romanize(
+    resultCenter.p2
+  )} + ${romanize(resultRight.p2)}`;
+  bottomAnswer3.innerHTML = `${romanize(resultLeft.p3)} + ${romanize(
+    resultCenter.p3
+  )} + ${romanize(resultRight.p3)}`;
+  bottomAnswer4.innerHTML = `${romanize(resultLeft.p4)} + ${romanize(
+    resultCenter.p4
+  )} + ${romanize(resultRight.p4)}`;
+  bottomAnswer5.innerHTML = `${romanize(resultLeft.p5)} + ${romanize(
+    resultCenter.p5
+  )} + ${romanize(resultRight.p5)}`;
+  bottomAnswer6.innerHTML = `${romanize(resultLeft.p6)} + ${romanize(
+    resultCenter.p6
+  )} + ${romanize(resultRight.p6)}`;
+  bottomAnswer7.innerHTML = `${romanize(resultLeft.p7)} + ${romanize(
+    resultCenter.p7
+  )} + ${romanize(resultRight.p7)}`;
+  bottomAnswer8.innerHTML = `${romanize(resultLeft.p8)} + ${romanize(
+    resultCenter.p8
+  )} + ${romanize(resultRight.p8)}`;
+  bottomAnswer13.innerHTML = `${romanize(resultLeft.p13)} + ${romanize(
+    resultCenter.p13
+  )} + ${romanize(resultRight.p13)}`;
+  bottomAnswer14.innerHTML = `${romanize(resultLeft.p14)} + ${romanize(
+    resultCenter.p14
+  )} + ${romanize(resultRight.p14)}`;
 }
 
 //---------------Counting the left TABLE------------
