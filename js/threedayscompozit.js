@@ -56,6 +56,26 @@ const resultSumAll8 = document.querySelector("#sum-all-result8");
 const resultSumAll13 = document.querySelector("#sum-all-result13");
 const resultSumAll14 = document.querySelector("#sum-all-result14");
 
+//BOTTOM ANSWERS IN LEFT POSITIONS
+const leftAnswer4 = document.querySelector("#leftAnswer4");
+const leftAnswer5 = document.querySelector("#leftAnswer5");
+const leftAnswer6 = document.querySelector("#leftAnswer6");
+const leftAnswer7 = document.querySelector("#leftAnswer7");
+const leftAnswer8 = document.querySelector("#leftAnswer8");
+const leftAnswer12 = document.querySelector("#leftAnswer12");
+const leftAnswer13 = document.querySelector("#leftAnswer13");
+const leftAnswer14 = document.querySelector("#leftAnswer14");
+
+//BOTTOM ANSWERS IN CENTER POSITIONS
+const centerAnswer4 = document.querySelector("#centerAnswer4");
+const centerAnswer5 = document.querySelector("#centerAnswer5");
+const centerAnswer6 = document.querySelector("#centerAnswer6");
+const centerAnswer7 = document.querySelector("#centerAnswer7");
+const centerAnswer8 = document.querySelector("#centerAnswer8");
+const centerAnswer12 = document.querySelector("#centerAnswer12");
+const centerAnswer13 = document.querySelector("#centerAnswer13");
+const centerAnswer14 = document.querySelector("#centerAnswer14");
+
 //---------------------------//
 form.addEventListener("submit", getFormValue);
 function getFormValue(event) {
@@ -149,6 +169,99 @@ function getFormValue(event) {
   resultSumAll8.innerHTML = resultSumAll.p8;
   resultSumAll13.innerHTML = resultSumAll.p13;
   resultSumAll14.innerHTML = resultSumAll.p14;
+
+  //ANSWERS ****LEFT****
+  leftAnswer4.innerHTML = `${romanize(resultLeft.p1)}+${romanize(
+    resultLeft.p2
+  )}`;
+
+  leftAnswer5.innerHTML = `${romanize(resultLeft.p2)}+${romanize(
+    resultLeft.p3
+  )}`;
+
+  leftAnswer6.innerHTML = `${romanize(resultLeft.p4)}+${romanize(
+    resultLeft.p5
+  )}`;
+
+  leftAnswer7.innerHTML = `${romanize(resultLeft.p1)}+${romanize(
+    resultLeft.p5
+  )}`;
+
+  leftAnswer8.innerHTML = `${romanize(resultLeft.p2)}+${romanize(
+    resultLeft.p6
+  )}`;
+
+  leftAnswer12.innerHTML = `${romanize(resultLeft.p7)}+${romanize(
+    resultLeft.p8
+  )}`;
+
+  leftAnswer13.innerHTML = `${romanize(resultLeft.p1)}+${romanize(
+    resultLeft.p4
+  )}+${romanize(resultLeft.p6)}`;
+
+  leftAnswer14.innerHTML = `${romanize(resultLeft.p3)}+${romanize(
+    resultLeft.p5
+  )}+${romanize(resultLeft.p6)}`;
+
+  //ANSWERS *****CENTER*******
+  centerAnswer4.innerHTML = `${romanize(resultCenter.p1)}+${romanize(
+    resultCenter.p2
+  )}`;
+  centerAnswer5.innerHTML = `${romanize(resultCenter.p2)}+${romanize(
+    resultCenter.p3
+  )}`;
+  centerAnswer6.innerHTML = `${romanize(resultCenter.p4)}+${romanize(
+    resultCenter.p5
+  )}`;
+  centerAnswer7.innerHTML = `${romanize(resultCenter.p1)}+${romanize(
+    resultCenter.p5
+  )}`;
+  centerAnswer8.innerHTML = `${romanize(resultCenter.p2)}+${romanize(
+    resultCenter.p6
+  )}`;
+  centerAnswer12.innerHTML = `${romanize(resultCenter.p7)}+${romanize(
+    resultCenter.p8
+  )}`;
+  centerAnswer13.innerHTML = `${romanize(resultCenter.p1)}+${romanize(
+    resultCenter.p4
+  )}+${romanize(resultCenter.p6)}`;
+  centerAnswer14.innerHTML = `${romanize(resultCenter.p3)}+${romanize(
+    resultCenter.p5
+  )}+${romanize(resultCenter.p6)}`;
+
+  //RIGHT ANSWER POSITIONS
+
+  rightAnswer4.innerHTML = `${romanize(resultRight.p1)}+${romanize(
+    resultRight.p2
+  )}`;
+
+  rightAnswer5.innerHTML = `${romanize(resultRight.p2)}+${romanize(
+    resultRight.p3
+  )}`;
+
+  rightAnswer6.innerHTML = `${romanize(resultRight.p4)}+${romanize(
+    resultRight.p5
+  )}`;
+
+  rightAnswer7.innerHTML = `${romanize(resultRight.p1)}+${romanize(
+    resultRight.p5
+  )}`;
+
+  rightAnswer8.innerHTML = `${romanize(resultRight.p2)}+${romanize(
+    resultRight.p6
+  )}`;
+
+  rightAnswer12.innerHTML = `${romanize(resultRight.p7)}+${romanize(
+    resultRight.p8
+  )}`;
+
+  rightAnswer13.innerHTML = `${romanize(resultRight.p1)}+${romanize(
+    resultRight.p4
+  )}+${romanize(resultRight.p6)}`;
+
+  rightAnswer14.innerHTML = `${romanize(resultRight.p3)}+${romanize(
+    resultRight.p5
+  )}+${romanize(resultRight.p6)}`;
 }
 
 //---------------Counting the left TABLE------------
