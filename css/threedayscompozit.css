@@ -4,7 +4,7 @@ section {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  color: rgb(36, 36, 36);
+  color: rgb(36, 36, 36) !important;
 }
 
 span.result-symbol {
@@ -12,10 +12,13 @@ span.result-symbol {
   font-weight: 700;
   display: flex;
   justify-content: center;
-  color: rgb(36, 36, 36);
+  color: rgb(36, 36, 36) !important;
   margin-right: 10px;
 }
 
+form h2 {
+  font-weight: 400;
+}
 /*DROPDOWN MENU COMPOZIT DAYS*/
 .compozit-drop {
   width: 100%;
@@ -28,7 +31,7 @@ span.result-symbol {
   align-items: center;
   font-size: 14px;
   width: 30%;
-  color: rgb(36, 36, 36);
+  color: rgb(36, 36, 36) !important;
   box-shadow: none !important;
 }
 .compozit-drop ul li {
@@ -40,13 +43,154 @@ span.result-symbol {
 }
 .compozit-drop ul li a {
   text-decoration: none;
-  color: rgb(36, 36, 36);
+  color: rgb(36, 36, 36) !important;
 }
 
 .compozit-drop ul li:hover {
-  background-color: #99ccff;
+  background-color: #99ccff !important;
 }
 
 .compozit-drop ul li:focus {
-  background-color: #99ccff;
+  background-color: #99ccff !important;
+}
+
+@media (max-width: 1024px) {
+  form h2 {
+    font-size: 14px !important;
+  }
+  form input {
+    width: 50px;
+    font-size: 12px;
+    font-weight: 400 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .compozit-drop ul {
+    width: 70%;
+  }
+  form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  form h2 {
+    font-size: 14px !important;
+  }
+  form input {
+    margin: 0 2px !important;
+    padding: 5px !important;
+    width: 40px;
+    font-size: 12px;
+    font-weight: 400 !important;
+  }
+  #section-container {
+    max-width: 768px;
+    padding: 0 20px;
+  }
+  .tbh {
+    border-radius: 5px !important;
+    padding: 2px !important;
+  }
+  .ind {
+    font-size: 18px !important;
+    font-weight: bold;
+    color: rgb(36, 36, 36);
+  }
+
+  .ind_s {
+    font-size: 12px !important;
+    font-weight: bold;
+    color: rgb(36, 36, 36);
+  }
+
+  .sub {
+    font-size: 9px !important;
+    color: #999999;
+  }
+
+  .sub_s {
+    font-size: 8px !important;
+    color: #999999;
+  }
+
+  .inda {
+    font-size: 14px !important;
+    font-weight: bold;
+    color: rgb(36, 36, 36);
+  }
+
+  .eso ul li {
+    float: left;
+    padding: 1px;
+    font-size: 9px !important;
+  }
+}
+
+@media (max-width: 425px) {
+  form h2 {
+    font-size: 10px !important;
+  }
+  form input {
+    margin: 0 2px !important;
+    padding: 5px !important;
+    width: 35px;
+    font-size: 10px;
+    font-weight: 400 !important;
+  }
+  #section-container {
+    max-width: 425px;
+    padding: 0 20px;
+  }
+  tr.tr-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  td.w100 {
+    width: 100% !important;
+  }
+  .tbh {
+    border-radius: 5px !important;
+    padding: 5px !important;
+    font-size: 12px !important;
+  }
+  .ind {
+    font-size: 18px !important;
+    font-weight: bold;
+    color: rgb(36, 36, 36);
+  }
+
+  .ind_s {
+    font-size: 12px !important;
+    font-weight: bold;
+    color: rgb(36, 36, 36);
+  }
+
+  .sub {
+    font-size: 8px !important;
+    color: #999999;
+  }
+
+  .sub_s {
+    font-size: 8px !important;
+    color: #999999;
+  }
+
+  .inda {
+    font-size: 14px !important;
+    font-weight: bold;
+    color: rgb(36, 36, 36);
+  }
+
+  .eso ul li {
+    float: left;
+    padding: 1px;
+    font-size: 9px !important;
+  }
+  nav ul li a {
+    font-size: 14px;
+    padding: 5px !important;
+    margin: 0 5px !important;
+  }
 }

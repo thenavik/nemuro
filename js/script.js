@@ -763,18 +763,18 @@ function getFormValue() {
 
   date.innerHTML = `${data.day}.${data.month}.${data.year}`;
 
-  topAnswer4.innerHTML = `${romanize(result.p1)} + ${romanize(result.p2)}`;
-  topAnswer5.innerHTML = `${romanize(result.p2)} + ${romanize(result.p3)}`;
-  topAnswer6.innerHTML = `${romanize(result.p4)} + ${romanize(result.p5)}`;
-  topAnswer7.innerHTML = `${romanize(result.p1)} + ${romanize(result.p5)}`;
-  topAnswer8.innerHTML = `${romanize(result.p2)} + ${romanize(result.p6)}`;
-  topAnswer12.innerHTML = `${romanize(result.p7)} + ${romanize(result.p8)}`;
-  topAnswer13.innerHTML = `${romanize(result.p1)} + ${romanize(
+  topAnswer4.innerHTML = `${romanize(result.p1)}+${romanize(result.p2)}`;
+  topAnswer5.innerHTML = `${romanize(result.p2)}+${romanize(result.p3)}`;
+  topAnswer6.innerHTML = `${romanize(result.p4)}+${romanize(result.p5)}`;
+  topAnswer7.innerHTML = `${romanize(result.p1)}+${romanize(result.p5)}`;
+  topAnswer8.innerHTML = `${romanize(result.p2)}+${romanize(result.p6)}`;
+  topAnswer12.innerHTML = `${romanize(result.p7)}+${romanize(result.p8)}`;
+  topAnswer13.innerHTML = `${romanize(result.p1)}+${romanize(
     result.p4
-  )} + ${romanize(result.p6)}`;
-  topAnswer14.innerHTML = `${romanize(result.p3)} + ${romanize(
+  )}+${romanize(result.p6)}`;
+  topAnswer14.innerHTML = `${romanize(result.p3)}+${romanize(
     result.p5
-  )} + ${romanize(result.p6)}`;
+  )}+${romanize(result.p6)}`;
 
   const gray9Res =
     (result.p2 - result.p1 > 22
@@ -858,24 +858,24 @@ function getFormValue() {
       : result.p1 + result.p2 + result.p3 + result.p4 + result.p5 + result.p6
   );
 
-  grayAnswer9.innerHTML = `${romanize(result.p2)} - ${romanize(result.p1)}`;
-  grayAnswer10.innerHTML = `${romanize(result.p3)} - ${romanize(result.p2)}`;
-  grayAnswer11.innerHTML = `${romanize(gray10Res)} - ${romanize(gray9Res)}`;
-  grayAnswer15.innerHTML = `${romanize(gray9Res)} + ${romanize(
+  grayAnswer9.innerHTML = `(${romanize(result.p2)}-${romanize(result.p1)})`;
+  grayAnswer10.innerHTML = `(${romanize(result.p3)}-${romanize(result.p2)})`;
+  grayAnswer11.innerHTML = `(${romanize(gray10Res)}-${romanize(gray9Res)})`;
+  grayAnswer15.innerHTML = `(${romanize(gray9Res)}+${romanize(
     gray10Res
-  )} + ${romanize(gray11Res)}`;
-  grayAnswer16.innerHTML = `${romanize(result.p1)} + ${romanize(
+  )}+${romanize(gray11Res)})`;
+  grayAnswer16.innerHTML = `(${romanize(result.p1)}+${romanize(
     result.p3
-  )} + ${romanize(result.p4)} + ${romanize(result.p5)}`;
-  grayAnswer17.innerHTML = `${romanize(gray11Res)} + ${romanize(result.p6)}`;
-  grayAnswer18.innerHTML = `${romanize(gray11Res)} + ${romanize(result.p8)}`;
-  grayAnswer19.innerHTML = `${romanize(result.p4)} + ${romanize(result.p6)}`;
-  grayAnswer20.innerHTML = `${romanize(result.p5)} + ${romanize(result.p6)}`;
-  grayAnswer21.innerHTML = `${romanize(result.p1)} + ${romanize(
+  )}+${romanize(result.p4)}+${romanize(result.p5)})`;
+  grayAnswer17.innerHTML = `(${romanize(gray11Res)}+${romanize(result.p6)})`;
+  grayAnswer18.innerHTML = `(${romanize(gray11Res)}+${romanize(result.p8)})`;
+  grayAnswer19.innerHTML = `(${romanize(result.p4)}+${romanize(result.p6)})`;
+  grayAnswer20.innerHTML = `(${romanize(result.p5)}+${romanize(result.p6)})`;
+  grayAnswer21.innerHTML = `(${romanize(result.p1)}+${romanize(
     result.p2
-  )} + ${romanize(result.p3)} + ${romanize(result.p4)} + ${romanize(
+  )}+${romanize(result.p3)}+${romanize(result.p4)}+${romanize(
     result.p5
-  )} + ${romanize(result.p6)}`;
+  )}+${romanize(result.p6)})`;
 
   function filtrTaroTable(number) {
     return taroTable.filter((el) => el.position == number);
@@ -937,29 +937,29 @@ function getFormValue() {
       : result.p5 + result.p6;
 
   midA.innerHTML = romanize(midARes);
-  midASub.innerHTML = `${romanize(result.p1)} + ${romanize(result.p4)}`;
+  midASub.innerHTML = `${romanize(result.p1)}+${romanize(result.p4)}`;
 
   midB.innerHTML = romanize(midBRes);
-  midBSub.innerHTML = `${romanize(result.p2)} + ${romanize(result.p4)}`;
+  midBSub.innerHTML = `${romanize(result.p2)}+${romanize(result.p4)}`;
 
   midC.innerHTML = romanize(midCRes);
-  midCSub.innerHTML = `${romanize(result.p2)} + ${romanize(result.p5)}`;
+  midCSub.innerHTML = `${romanize(result.p2)}+${romanize(result.p5)}`;
 
   midD.innerHTML = romanize(midDRes);
-  midDSub.innerHTML = `${romanize(result.p3)} + ${romanize(result.p5)}`;
+  midDSub.innerHTML = `${romanize(result.p3)}+${romanize(result.p5)}`;
 
   midE.innerHTML = romanize(midERes);
-  midESub.innerHTML = `${romanize(result.p4)} + ${romanize(result.p6)}`;
+  midESub.innerHTML = `${romanize(result.p4)}+${romanize(result.p6)}`;
 
   midF.innerHTML = romanize(midFRes);
-  midFSub.innerHTML = `${romanize(result.p5)} + ${romanize(result.p6)}`;
+  midFSub.innerHTML = `${romanize(result.p5)}+${romanize(result.p6)}`;
 
   midG1.innerHTML = romanize(midCRes + midDRes);
-  midG1Sub.innerHTML = `${romanize(midCRes)} + ${romanize(midDRes)}`;
+  midG1Sub.innerHTML = `${romanize(midCRes)}+${romanize(midDRes)}`;
   midG2.innerHTML = romanize(midBRes + midFRes);
-  midG2Sub.innerHTML = `${romanize(midBRes)} + ${romanize(midFRes)}`;
+  midG2Sub.innerHTML = `${romanize(midBRes)}+${romanize(midFRes)}`;
   midH.innerHTML = romanize(midARes + midERes);
-  midG2Sub.innerHTML = `${romanize(midARes)} + ${romanize(midERes)}`;
+  midG2Sub.innerHTML = `${romanize(midARes)}+${romanize(midERes)}`;
 }
 
 function resultPsiPotret(data) {

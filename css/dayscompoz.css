@@ -307,4 +307,156 @@ footer span.copyright {
   text-decoration: none;
   color: rgb(36, 36, 36);
 }
-/* --------------------FOOTER----------------- */ ;
+/* --------------------FOOTER----------------- */
+
+@media (max-width: 1024px) {
+  .columns {
+    max-width: 1024px;
+    padding: 0 10px;
+    overflow-x: hidden !important;
+  }
+  .tbh {
+    border-radius: 10px;
+    padding: 5px !important;
+    font-size: 12px !important;
+  }
+  .ind {
+    font-size: 12px !important;
+  }
+  .ind_s {
+    font-size: 12px !important;
+  }
+  .sub {
+    font-size: 8px !important;
+  }
+  .sub_s {
+    font-size: 6px !important;
+  }
+  .inda {
+    font-size: 12px !important;
+  }
+  .gray {
+    color: #999999;
+  }
+  .eso ul li {
+    font-size: 8px !important;
+  }
+  .anons {
+    margin-bottom: 0.5rem !important;
+  }
+  .main-section {
+    max-width: 1024px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .compozit-drop ul {
+    width: 768px;
+  }
+  .columns {
+    flex-direction: column;
+    max-width: 720px;
+    align-items: center;
+  }
+  .column-1 {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 425px) {
+  .main-section {
+    max-width: 420px;
+  }
+  .main-content h2 {
+    font-size: 14px;
+  }
+  #form h2 {
+    font-size: 12px;
+  }
+  #form input {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px;
+  }
+  #form button {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 3px;
+  }
+
+  .main-content-2 h2 {
+    font-size: 14px;
+  }
+  #form2 h2 {
+    font-size: 12px;
+  }
+  #form2 input {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px;
+  }
+  #form2 button {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 3px;
+  }
+  .columns {
+    max-width: 410px;
+  }
+  .column-1 {
+    max-width: 400px;
+  }
+  .flx {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .w70 {
+    width: 70%;
+  }
+  span.line {
+    width: 400px;
+    height: 1px;
+    border-bottom: 1px solid black;
+    margin: 0 auto;
+  }
+  .tbh {
+    border-radius: 5px;
+    padding: 2.5px !important;
+    font-size: 10px !important;
+  }
+  .ind {
+    font-size: 10px !important;
+  }
+  .ind_s {
+    font-size: 10px !important;
+  }
+  .sub {
+    font-size: 6px !important;
+  }
+  .sub_s {
+    font-size: 4px !important;
+  }
+  .inda {
+    font-size: 10px !important;
+  }
+  .gray {
+    color: #999999;
+  }
+  .eso ul li {
+    font-size: 6px !important;
+  }
+  nav ul li a {
+    font-size: 14px;
+    padding: 5px !important;
+    margin: 0 5px !important;
+  }
+}

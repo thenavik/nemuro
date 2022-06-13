@@ -9,7 +9,7 @@ body {
   font-family: "Libre Baskerville", serif;
   font-size: 18px;
   font-weight: 600;
-  color: rgb(36, 36, 36);
+  color: rgb(36, 36, 36) !important;
 }
 
 .container {
@@ -26,8 +26,9 @@ h2 {
 }
 .phone {
   text-decoration: none;
-  color: rgb(36, 36, 36);
+  color: rgb(36, 36, 36) !important;
 }
+
 /* NAVIGATION */
 
 nav {
@@ -35,7 +36,7 @@ nav {
   justify-content: center;
   width: 100%;
   margin: 0 auto;
-  background: #fff;
+  background: #fff !important;
   padding: 10px 0;
   -webkit-box-shadow: 0px 4px 15px 1px rgba(153, 204, 255, 0.25);
   -moz-box-shadow: 0px 4px 15px 1px rgba(153, 204, 255, 0.25);
@@ -57,7 +58,7 @@ nav ul li a {
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: rgb(36, 36, 36);
+  color: rgb(36, 36, 36) !important;
   font-weight: 800;
   text-transform: uppercase;
   margin: 0 10px;
@@ -68,14 +69,14 @@ nav ul li a:before {
   transition: all 0.5s;
 }
 nav ul li a:hover {
-  color: #555;
+  color: #555 !important;
 }
 nav.shift ul li a {
   position: relative;
   z-index: 1;
 }
 nav.shift ul li a:hover {
-  color: #fff;
+  color: #fff !important;
 }
 nav.shift ul li a:after {
   display: block;
@@ -103,7 +104,6 @@ nav.shift ul li a:hover:after {
   visibility: visible;
   height: 100%;
 }
-
 /*======================*/
 .main-section {
   display: flex;
@@ -158,7 +158,7 @@ button {
   box-shadow: 0px 4px 15px 1px rgba(153, 204, 255, 0.25);
   font-size: 14px;
   font-weight: 600;
-  color: #fff;
+  color: #fff !important;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -180,7 +180,7 @@ section {
   bottom: 0;
   padding: 10px;
   background: #99ccff;
-  color: rgb(36, 36, 36);
+  color: rgb(36, 36, 36) !important;
   width: 100%;
   text-align: center;
   line-height: 1.5;
@@ -198,8 +198,8 @@ a.contacts {
 }
 
 a.contacts:hover {
-  border-bottom: 2px solid #fff;
-  color: #fff;
+  border-bottom: 2px solid #fff !important;
+  color: #fff !important;
 }
 
 .info {
@@ -207,11 +207,12 @@ a.contacts:hover {
   justify-content: center;
   align-items: center;
   padding: 10px;
+  padding-bottom: 0;
 }
 
 footer span.copyright a {
   text-decoration: none;
-  color: #fff;
+  color: #fff !important;
   font-size: 16px;
 }
 footer span.copyright {
@@ -227,4 +228,103 @@ svg {
 footer span a svg:hover {
   background: #4285c7;
 }
-/* --------------------FOOTER----------------- */ ;
+/* --------------------FOOTER----------------- */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 1000px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 750px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    max-width: 400px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  #form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #form span {
+    font-size: 12px;
+    font-weight: 400;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  #form button {
+    margin: 10px;
+  }
+  .tbh {
+    border: 1px solid #3366ff;
+    background-color: #99ccff;
+    font-weight: bold;
+    border-radius: 5px !important;
+    padding: 3px !important;
+  }
+
+  .ind {
+    font-size: 14px !important;
+    font-weight: bold;
+    color: rgb(36, 36, 36);
+  }
+
+  .sub {
+    font-size: 6px !important;
+    color: #999999;
+  }
+
+  .sub_s {
+    font-size: 8px !important;
+    color: #999999;
+  }
+
+  .inda {
+    font-size: 14px !important;
+    font-weight: bold;
+    color: rgb(36, 36, 36);
+  }
+
+  .eso ul li {
+    float: left;
+    padding: 0px;
+    font-size: 5px !important;
+  }
+
+  .gray {
+    font-size: 8px !important;
+  }
+  #date {
+    font-size: 12px;
+  }
+
+  .tbh {
+    font-size: 12px !important;
+  }
+  footer h2 {
+    font-size: 14px !important;
+    text-transform: uppercase;
+  }
+  footer p {
+    font-size: 12px !important;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  nav ul li a {
+    font-size: 12px;
+    padding: 5px !important;
+    margin: 0 2.5px !important;
+  }
+}

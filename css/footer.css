@@ -52,3 +52,6 @@ footer span a svg:hover {
   background: #4285c7;
 }
 /* --------------------FOOTER----------------- */
+
+@media (max-width: 1024px) {
+}
